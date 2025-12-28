@@ -1,0 +1,3 @@
+[submodule "meddah-portfolio/themes/hugo-theme-stack"]
+	path = meddah-portfolio/themes/hugo-theme-stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack

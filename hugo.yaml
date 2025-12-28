@@ -1,0 +1,63 @@
+title: MEDDAH.SYSTEMS
+baseURL: https://meddah.systems
+theme: hugo-theme-stack
+
+params:
+    mainSections:
+        - post
+        - offensive
+        - cloud
+        - infrastracture
+    featuredImageField: image
+    sidebar:
+        emoji: 🛡️
+        subtitle: Security & Networks Infrastracture Engineer
+        avatar:
+            enabled: true
+            src: img/avatar.png # Put your professional photo or a CLI icon in static/img/
+
+    footer:
+        copyright: MEDDAH Mohamed // Operational Security
+
+    # Dark mode is mandatory for the vibe
+    defaultTheme: Dark
+
+# MENU NAVIGATION: This is how pros navigate
+menu:
+    main:
+        - identifier: about
+          name: About
+          url: /page/about/
+          weight: 1
+          params:
+              icon: user
+        - identifier: Blog
+          name: Blog
+          url: /post/
+          weight: 30
+          params:
+              icon: clock
+        - identifier: Write-ups
+          name: Write-ups
+          url: /post/Offensive/
+          weight: 20
+          params:
+              icon: messages
+        - identifier: resume
+          name: Resume
+          url: /page/resume/
+          weight: 2
+          params:
+              icon: link
+        - identifier: certs
+          name: Certifications
+          url: /page/certs/
+          weight: 3
+          params:
+              icon: hash
+        - identifier: archives
+          name: Archives
+          url: /page/archives/
+          weight: 4
+          params:
+              icon: archives

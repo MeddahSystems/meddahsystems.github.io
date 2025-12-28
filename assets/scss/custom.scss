@@ -1,0 +1,128 @@
+/* ==========================================================================
+   ELITE OPERATOR CUSTOM STYLES
+   Focus: Density, Precision, and System Aesthetics
+   ========================================================================== */
+
+:root {
+    /* Accent color: A sharp, professional "Cyber" Blue or Emerald */
+    --accent-color: #0011ff; 
+    --accent-color-rgb: 0, 212, 255;
+}
+
+/* 1. FIX: Home Page & Global Text Color for Dark Mode */
+/* Using CSS variables ensures automatic switching via the theme toggle */
+.article-content, 
+.article-details,
+.article-title,
+.main-article {
+    color: var(--card-text-color-main) !important;
+}
+
+/* 2. TERMINAL AESTHETIC FOR CODE BLOCKS */
+/* Makes your C++ and CLI snippets look like a real console */
+code {
+    font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace !important;
+    font-variant-ligatures: contextual;
+}
+
+.highlight {
+    border-radius: 8px;
+    border: 1px solid rgba(var(--accent-color-rgb), 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    
+    /* Subtle scanline effect on code blocks */
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.1) 50%
+    ), linear-gradient(
+        90deg, 
+        rgba(255, 0, 0, 0.03), 
+        rgba(0, 255, 0, 0.01), 
+        rgba(0, 0, 255, 0.03)
+    );
+    background-size: 100% 2px, 3px 100%;
+}
+
+/* 3. "OPERATOR" SIDEBAR MODS */
+/* Adds a subtle glow to the active menu item */
+.menu li.current {
+    border-left: 3px solid var(--accent-color);
+    background: linear-gradient(90deg, rgba(var(--accent-color-rgb), 0.1) 0%, transparent 100%);
+    
+    a {
+        color: var(--accent-color) !important;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* 4. TACTICAL TABLES (Resume/Certs) */
+/* Cleans up the tables to look like a data readout */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--accent-color);
+    padding: 10px;
+}
+
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(var(--accent-color-rgb), 0.1);
+}
+
+/* 5. BLOCKQUOTE UPGRADE (For your Stoic quotes) */
+blockquote {
+    border-left: 4px solid var(--accent-color) !important;
+    background: rgba(var(--accent-color-rgb), 0.05);
+    font-style: italic;
+    padding: 15px 25px;
+    margin: 20px 0;
+    position: relative;
+}
+
+blockquote::before {
+    content: "“";
+    font-size: 3rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    opacity: 0.1;
+    color: var(--accent-color);
+}
+
+/* 6. SUBTLE HOVER ANIMATIONS */
+/* Makes the site feel responsive and high-end */
+.article-list article {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-list article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 7. CUSTOM SCROLLBAR (Chrome/Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--accent-color-rgb), 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}

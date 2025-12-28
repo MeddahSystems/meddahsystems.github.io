@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homelab on MEDDAH.SYSTEMS</title><link>https://meddah.systems/tags/homelab/</link><description>Recent content in Homelab on MEDDAH.SYSTEMS</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://meddah.systems/tags/homelab/index.xml" rel="self" type="application/rss+xml"/><item><title>Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation</title><link>https://meddah.systems/post/infrastructure/pfsense-hardening/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>https://meddah.systems/post/infrastructure/pfsense-hardening/</guid><description>&lt;img src="https://meddah.systems/post/infrastructure/pfsense-hardening/cover.webp" alt="Featured image of post Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation" />&lt;h3 id="infrastructure-layout">Infrastructure Layout
+&lt;/h3>&lt;p>To maintain OPSEC and isolate exploit testing, I’ve implemented a multi-VLAN structure.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>VLAN 10 (Management):&lt;/strong> Isolated for primary workstations.&lt;/li>
+&lt;li>&lt;strong>VLAN 20 (Lab):&lt;/strong> Where the &amp;ldquo;vulnerable&amp;rdquo; targets live.&lt;/li>
+&lt;li>&lt;strong>VLAN 30 (Red):&lt;/strong> Dedicated for C2 traffic and egress testing.&lt;/li>
+&lt;/ul>
+&lt;h3 id="firewall-rules">Firewall Rules
+&lt;/h3>&lt;p>Rules are configured on a &lt;strong>Deny-by-Default&lt;/strong> basis. Only specific ports are mirrored to the IDS for traffic analysis.&lt;/p></description></item></channel></rss>
