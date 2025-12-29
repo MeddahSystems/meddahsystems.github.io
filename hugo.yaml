@@ -1,8 +1,9 @@
-title: MEDDAH.SYSTEMS
+title: MEDDAH Mohamed
 baseURL: https://meddah.systems
 theme: hugo-theme-stack
 
 params:
+    favicon: /favicon.ico
     mainSections:
         - post
         - offensive

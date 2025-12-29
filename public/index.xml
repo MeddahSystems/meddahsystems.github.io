@@ -1,62 +1,123 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Latest Research &amp; Operations on MEDDAH.SYSTEMS</title><link>https://meddah.systems/</link><description>Recent content in Latest Research &amp; Operations on MEDDAH.SYSTEMS</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://meddah.systems/index.xml" rel="self" type="application/rss+xml"/><item><title>Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation</title><link>https://meddah.systems/post/infrastructure/pfsense-hardening/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>https://meddah.systems/post/infrastructure/pfsense-hardening/</guid><description>&lt;img src="https://meddah.systems/post/infrastructure/pfsense-hardening/cover.webp" alt="Featured image of post Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation" />&lt;h3 id="infrastructure-layout">Infrastructure Layout
-&lt;/h3>&lt;p>To maintain OPSEC and isolate exploit testing, I’ve implemented a multi-VLAN structure.&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>VLAN 10 (Management):&lt;/strong> Isolated for primary workstations.&lt;/li>
-&lt;li>&lt;strong>VLAN 20 (Lab):&lt;/strong> Where the &amp;ldquo;vulnerable&amp;rdquo; targets live.&lt;/li>
-&lt;li>&lt;strong>VLAN 30 (Red):&lt;/strong> Dedicated for C2 traffic and egress testing.&lt;/li>
-&lt;/ul>
-&lt;h3 id="firewall-rules">Firewall Rules
-&lt;/h3>&lt;p>Rules are configured on a &lt;strong>Deny-by-Default&lt;/strong> basis. Only specific ports are mirrored to the IDS for traffic analysis.&lt;/p></description></item><item><title>Operation: Redacted - From SSRF to Internal Metadata Access</title><link>https://meddah.systems/post/offensive/demo-exploit/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>https://meddah.systems/post/offensive/demo-exploit/</guid><description>&lt;img src="https://meddah.systems/post/offensive/demo-exploit/cover.webp" alt="Featured image of post Operation: Redacted - From SSRF to Internal Metadata Access" />&lt;h3 id="executive-summary">Executive Summary
-&lt;/h3>&lt;p>During a routine reconnaissance phase on a private bug bounty program, I identified an Out-of-Band SSRF vulnerability in the PDF generation engine.&lt;/p>
-&lt;h3 id="the-chain">The Chain
-&lt;/h3>&lt;ol>
-&lt;li>&lt;strong>Discovery:&lt;/strong> Identified an endpoint &lt;code>/api/v1/generate&lt;/code> accepting a &lt;code>source_url&lt;/code> parameter.&lt;/li>
-&lt;li>&lt;strong>Bypass:&lt;/strong> Used a DNS rebinding technique to bypass the internal IP blacklist.&lt;/li>
-&lt;li>&lt;strong>Impact:&lt;/strong> Successfully retrieved AWS metadata credentials from &lt;code>169.254.169.254&lt;/code>.&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Example payload used&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -X POST &lt;span style="color:#f92672">[&lt;/span>https://target.com/api/v1/generate?source_url&lt;span style="color:#f92672">=&lt;/span>http://&lt;span style="color:#f92672">](&lt;/span>https://target.com/api/v1/generate?source_url&lt;span style="color:#f92672">=&lt;/span>http://&lt;span style="color:#f92672">)[&lt;/span>redacted&lt;span style="color:#f92672">]&lt;/span>.com/metadata
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Developing High-Performance CLI Tools in C++</title><link>https://meddah.systems/post/cpp-cli-tool/</link><pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate><guid>https://meddah.systems/post/cpp-cli-tool/</guid><description>&lt;img src="https://meddah.systems/post/cpp-cli-tool/cover.webp" alt="Featured image of post Developing High-Performance CLI Tools in C++" />&lt;h3 id="why-c">Why C++?
-&lt;/h3>&lt;p>In offensive security, speed and memory management are everything. When writing a network scanner or a process injector, I need zero-cost abstractions.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> std&lt;span style="color:#f92672">::&lt;/span>cout &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Initializing Security Module...&amp;#34;&lt;/span> &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> std&lt;span style="color:#f92672">::&lt;/span>endl;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Low-level logic here
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Archives</title><link>https://meddah.systems/page/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://meddah.systems/page/archives/</guid><description/></item><item><title>About Me</title><link>https://meddah.systems/page/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meddah.systems/page/about/</guid><description>&lt;h3 id="the-journey">The Journey
-&lt;/h3>&lt;p>My path into cybersecurity didn&amp;rsquo;t start with a tutorial on &amp;ldquo;how to hack.&amp;rdquo; It started with a terminal, managing servers, and troubleshooting network loops. My background as a &lt;strong>Sysadmin&lt;/strong> taught me how production environments actually breathe, which now gives me a unique advantage in offensive security: &lt;strong>I know what the logs look like on the other side.&lt;/strong>&lt;/p>
-&lt;h3 id="the-vision">The Vision
-&lt;/h3>&lt;p>My objective is the mastery of &lt;strong>End-to-End Offensive Operations&lt;/strong>. I am building toward becoming a well-rounded Red Teamer capable of moving from initial reconnaissance to deep exploitation and impact. I focus on understanding the underlying physics of a network—how data moves and where trust is misplaced—rather than just running automated scripts.&lt;/p>
-&lt;h3 id="philosophy--interests">Philosophy &amp;amp; Interests
-&lt;/h3>&lt;p>I operate on the principle of &lt;strong>deep focus&lt;/strong>. I value non-generic knowledge and the pursuit of technical depth.&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Stoicism&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>J.R.R. Tolkien&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>&amp;ldquo;You have power over your mind — not outside events. Realize this, and you will find strength.&amp;rdquo; — &lt;em>Marcus Aurelius&lt;/em>&lt;/p>
-&lt;/blockquote></description></item><item><title>Technical Stack</title><link>https://meddah.systems/page/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meddah.systems/page/resume/</guid><description>&lt;h3 id="offensive-security">Offensive Security
-&lt;/h3>&lt;ul>
-&lt;li>&lt;strong>Web &amp;amp; Network:&lt;/strong> Reconnaissance, Burp Suite, Web Exploit Chains, OWASP Top 10.&lt;/li>
-&lt;li>&lt;strong>Research:&lt;/strong> Bug Bounty Hunting (HackerOne/Bugcrowd), Vulnerability Discovery.&lt;/li>
-&lt;li>&lt;strong>Environment:&lt;/strong> Infrastructure Misconfigurations, Active Directory, Cloud Security (AWS/Azure).&lt;/li>
-&lt;/ul>
-&lt;h3 id="systems--infrastructure">Systems &amp;amp; Infrastructure
-&lt;/h3>&lt;ul>
-&lt;li>&lt;strong>Operating Systems:&lt;/strong> Linux Internals, Windows Server, Kernel understanding.&lt;/li>
-&lt;li>&lt;strong>Virtualization:&lt;/strong> VMware ESXi, Proxmox, VirtualBox.&lt;/li>
-&lt;li>&lt;strong>Networking:&lt;/strong> TCP/IP, DNS, DHCP, RDP, pfSense, VLANs, Traffic Analysis.&lt;/li>
-&lt;li>&lt;strong>Admin:&lt;/strong> Sysadmin workflows, Server Hardening, Infrastructure as Code.&lt;/li>
-&lt;/ul>
-&lt;h3 id="development--scripting">Development &amp;amp; Scripting
-&lt;/h3>&lt;ul>
-&lt;li>&lt;strong>Primary:&lt;/strong> C++ (Security Tooling, Low-level logic).&lt;/li>
-&lt;li>&lt;strong>Supporting:&lt;/strong> Java (Systems development), Python (Automation), Bash, SQL.&lt;/li>
-&lt;li>&lt;strong>Tooling:&lt;/strong> Git, Vim/CLI-first environment, Markdown.&lt;/li>
-&lt;/ul>
-&lt;h3 id="core-tools">Core Tools
-&lt;/h3>&lt;ul>
-&lt;li>&lt;code>nmap&lt;/code>, &lt;code>wireshark&lt;/code>, &lt;code>metasploit&lt;/code>, &lt;code>ffuf&lt;/code>, &lt;code>hashcat&lt;/code>, &lt;code>gdb&lt;/code>.&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Latest Research &amp; Operations on MEDDAH.SYSTEMS</title>
+        <link>http://localhost:1313/</link>
+        <description>Recent content in Latest Research &amp; Operations on MEDDAH.SYSTEMS</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation</title>
+        <link>http://localhost:1313/post/infrastructure/pfsense-hardening/</link>
+        <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/infrastructure/pfsense-hardening/</guid>
+        <description>&lt;img src="http://localhost:1313/post/infrastructure/pfsense-hardening/cover.webp" alt="Featured image of post Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation" /&gt;&lt;h3 id=&#34;infrastructure-layout&#34;&gt;Infrastructure Layout
+&lt;/h3&gt;&lt;p&gt;To maintain OPSEC and isolate exploit testing, I’ve implemented a multi-VLAN structure.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VLAN 10 (Management):&lt;/strong&gt; Isolated for primary workstations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLAN 20 (Lab):&lt;/strong&gt; Where the &amp;ldquo;vulnerable&amp;rdquo; targets live.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLAN 30 (Red):&lt;/strong&gt; Dedicated for C2 traffic and egress testing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;firewall-rules&#34;&gt;Firewall Rules
+&lt;/h3&gt;&lt;p&gt;Rules are configured on a &lt;strong&gt;Deny-by-Default&lt;/strong&gt; basis. Only specific ports are mirrored to the IDS for traffic analysis.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Operation: Redacted - From SSRF to Internal Metadata Access</title>
+        <link>http://localhost:1313/post/offensive/demo-exploit/</link>
+        <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/offensive/demo-exploit/</guid>
+        <description>&lt;img src="http://localhost:1313/post/offensive/demo-exploit/cover.webp" alt="Featured image of post Operation: Redacted - From SSRF to Internal Metadata Access" /&gt;&lt;h3 id=&#34;executive-summary&#34;&gt;Executive Summary
+&lt;/h3&gt;&lt;p&gt;During a routine reconnaissance phase on a private bug bounty program, I identified an Out-of-Band SSRF vulnerability in the PDF generation engine.&lt;/p&gt;
+&lt;h3 id=&#34;the-chain&#34;&gt;The Chain
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Discovery:&lt;/strong&gt; Identified an endpoint &lt;code&gt;/api/v1/generate&lt;/code&gt; accepting a &lt;code&gt;source_url&lt;/code&gt; parameter.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bypass:&lt;/strong&gt; Used a DNS rebinding technique to bypass the internal IP blacklist.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Impact:&lt;/strong&gt; Successfully retrieved AWS metadata credentials from &lt;code&gt;169.254.169.254&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Example payload used&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -X POST &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;https://target.com/api/v1/generate?source_url&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;http://&lt;span style=&#34;color:#f92672&#34;&gt;](&lt;/span&gt;https://target.com/api/v1/generate?source_url&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;http://&lt;span style=&#34;color:#f92672&#34;&gt;)[&lt;/span&gt;redacted&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;.com/metadata
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Developing High-Performance CLI Tools in C&#43;&#43;</title>
+        <link>http://localhost:1313/post/cpp-cli-tool/</link>
+        <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/cpp-cli-tool/</guid>
+        <description>&lt;img src="http://localhost:1313/post/cpp-cli-tool/cover.webp" alt="Featured image of post Developing High-Performance CLI Tools in C&#43;&#43;" /&gt;&lt;h3 id=&#34;why-c&#34;&gt;Why C++?
+&lt;/h3&gt;&lt;p&gt;In offensive security, speed and memory management are everything. When writing a network scanner or a process injector, I need zero-cost abstractions.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Initializing Security Module...&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Low-level logic here
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>http://localhost:1313/page/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>About Me</title>
+        <link>http://localhost:1313/page/about/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/about/</guid>
+        <description>&lt;h3 id=&#34;the-journey&#34;&gt;The Journey
+&lt;/h3&gt;&lt;p&gt;My path into cybersecurity didn&amp;rsquo;t start with a tutorial on &amp;ldquo;how to hack.&amp;rdquo; It started with a terminal, managing servers, and troubleshooting network loops. My background as a &lt;strong&gt;Sysadmin&lt;/strong&gt; taught me how production environments actually breathe, which now gives me a unique advantage in offensive security: &lt;strong&gt;I know what the logs look like on the other side.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-vision&#34;&gt;The Vision
+&lt;/h3&gt;&lt;p&gt;My objective is the mastery of &lt;strong&gt;End-to-End Offensive Operations&lt;/strong&gt;. I am building toward becoming a well-rounded Red Teamer capable of moving from initial reconnaissance to deep exploitation and impact. I focus on understanding the underlying physics of a network—how data moves and where trust is misplaced—rather than just running automated scripts.&lt;/p&gt;
+&lt;h3 id=&#34;philosophy--interests&#34;&gt;Philosophy &amp;amp; Interests
+&lt;/h3&gt;&lt;p&gt;I operate on the principle of &lt;strong&gt;deep focus&lt;/strong&gt;. I value non-generic knowledge and the pursuit of technical depth.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stoicism&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;J.R.R. Tolkien&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You have power over your mind — not outside events. Realize this, and you will find strength.&amp;rdquo; — &lt;em&gt;Marcus Aurelius&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Technical Stack</title>
+        <link>http://localhost:1313/page/resume/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/resume/</guid>
+        <description>&lt;h3 id=&#34;offensive-security&#34;&gt;Offensive Security
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Web &amp;amp; Network:&lt;/strong&gt; Reconnaissance, Burp Suite, Web Exploit Chains, OWASP Top 10.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Research:&lt;/strong&gt; Bug Bounty Hunting (HackerOne/Bugcrowd), Vulnerability Discovery.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Environment:&lt;/strong&gt; Infrastructure Misconfigurations, Active Directory, Cloud Security (AWS/Azure).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;systems--infrastructure&#34;&gt;Systems &amp;amp; Infrastructure
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Operating Systems:&lt;/strong&gt; Linux Internals, Windows Server, Kernel understanding.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Virtualization:&lt;/strong&gt; VMware ESXi, Proxmox, VirtualBox.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Networking:&lt;/strong&gt; TCP/IP, DNS, DHCP, RDP, pfSense, VLANs, Traffic Analysis.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Admin:&lt;/strong&gt; Sysadmin workflows, Server Hardening, Infrastructure as Code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;development--scripting&#34;&gt;Development &amp;amp; Scripting
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Primary:&lt;/strong&gt; C++ (Security Tooling, Low-level logic).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Supporting:&lt;/strong&gt; Java (Systems development), Python (Automation), Bash, SQL.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tooling:&lt;/strong&gt; Git, Vim/CLI-first environment, Markdown.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;core-tools&#34;&gt;Core Tools
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nmap&lt;/code&gt;, &lt;code&gt;wireshark&lt;/code&gt;, &lt;code&gt;metasploit&lt;/code&gt;, &lt;code&gt;ffuf&lt;/code&gt;, &lt;code&gt;hashcat&lt;/code&gt;, &lt;code&gt;gdb&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

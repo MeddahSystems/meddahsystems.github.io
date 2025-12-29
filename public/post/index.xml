@@ -1,28 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on MEDDAH.SYSTEMS</title><link>https://meddah.systems/post/</link><description>Recent content in Posts on MEDDAH.SYSTEMS</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://meddah.systems/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation</title><link>https://meddah.systems/post/infrastructure/pfsense-hardening/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>https://meddah.systems/post/infrastructure/pfsense-hardening/</guid><description>&lt;img src="https://meddah.systems/post/infrastructure/pfsense-hardening/cover.webp" alt="Featured image of post Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation" />&lt;h3 id="infrastructure-layout">Infrastructure Layout
-&lt;/h3>&lt;p>To maintain OPSEC and isolate exploit testing, I’ve implemented a multi-VLAN structure.&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>VLAN 10 (Management):&lt;/strong> Isolated for primary workstations.&lt;/li>
-&lt;li>&lt;strong>VLAN 20 (Lab):&lt;/strong> Where the &amp;ldquo;vulnerable&amp;rdquo; targets live.&lt;/li>
-&lt;li>&lt;strong>VLAN 30 (Red):&lt;/strong> Dedicated for C2 traffic and egress testing.&lt;/li>
-&lt;/ul>
-&lt;h3 id="firewall-rules">Firewall Rules
-&lt;/h3>&lt;p>Rules are configured on a &lt;strong>Deny-by-Default&lt;/strong> basis. Only specific ports are mirrored to the IDS for traffic analysis.&lt;/p></description></item><item><title>Operation: Redacted - From SSRF to Internal Metadata Access</title><link>https://meddah.systems/post/offensive/demo-exploit/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate><guid>https://meddah.systems/post/offensive/demo-exploit/</guid><description>&lt;img src="https://meddah.systems/post/offensive/demo-exploit/cover.webp" alt="Featured image of post Operation: Redacted - From SSRF to Internal Metadata Access" />&lt;h3 id="executive-summary">Executive Summary
-&lt;/h3>&lt;p>During a routine reconnaissance phase on a private bug bounty program, I identified an Out-of-Band SSRF vulnerability in the PDF generation engine.&lt;/p>
-&lt;h3 id="the-chain">The Chain
-&lt;/h3>&lt;ol>
-&lt;li>&lt;strong>Discovery:&lt;/strong> Identified an endpoint &lt;code>/api/v1/generate&lt;/code> accepting a &lt;code>source_url&lt;/code> parameter.&lt;/li>
-&lt;li>&lt;strong>Bypass:&lt;/strong> Used a DNS rebinding technique to bypass the internal IP blacklist.&lt;/li>
-&lt;li>&lt;strong>Impact:&lt;/strong> Successfully retrieved AWS metadata credentials from &lt;code>169.254.169.254&lt;/code>.&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Example payload used&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -X POST &lt;span style="color:#f92672">[&lt;/span>https://target.com/api/v1/generate?source_url&lt;span style="color:#f92672">=&lt;/span>http://&lt;span style="color:#f92672">](&lt;/span>https://target.com/api/v1/generate?source_url&lt;span style="color:#f92672">=&lt;/span>http://&lt;span style="color:#f92672">)[&lt;/span>redacted&lt;span style="color:#f92672">]&lt;/span>.com/metadata
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Developing High-Performance CLI Tools in C++</title><link>https://meddah.systems/post/cpp-cli-tool/</link><pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate><guid>https://meddah.systems/post/cpp-cli-tool/</guid><description>&lt;img src="https://meddah.systems/post/cpp-cli-tool/cover.webp" alt="Featured image of post Developing High-Performance CLI Tools in C++" />&lt;h3 id="why-c">Why C++?
-&lt;/h3>&lt;p>In offensive security, speed and memory management are everything. When writing a network scanner or a process injector, I need zero-cost abstractions.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> std&lt;span style="color:#f92672">::&lt;/span>cout &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Initializing Security Module...&amp;#34;&lt;/span> &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> std&lt;span style="color:#f92672">::&lt;/span>endl;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Low-level logic here
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on MEDDAH.SYSTEMS</title>
+        <link>http://localhost:1313/post/</link>
+        <description>Recent content in Posts on MEDDAH.SYSTEMS</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation</title>
+        <link>http://localhost:1313/post/infrastructure/pfsense-hardening/</link>
+        <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/infrastructure/pfsense-hardening/</guid>
+        <description>&lt;img src="http://localhost:1313/post/infrastructure/pfsense-hardening/cover.webp" alt="Featured image of post Hardening Edge Infrastructure: pfSense &amp; VLAN Segmentation" /&gt;&lt;h3 id=&#34;infrastructure-layout&#34;&gt;Infrastructure Layout
+&lt;/h3&gt;&lt;p&gt;To maintain OPSEC and isolate exploit testing, I’ve implemented a multi-VLAN structure.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VLAN 10 (Management):&lt;/strong&gt; Isolated for primary workstations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLAN 20 (Lab):&lt;/strong&gt; Where the &amp;ldquo;vulnerable&amp;rdquo; targets live.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLAN 30 (Red):&lt;/strong&gt; Dedicated for C2 traffic and egress testing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;firewall-rules&#34;&gt;Firewall Rules
+&lt;/h3&gt;&lt;p&gt;Rules are configured on a &lt;strong&gt;Deny-by-Default&lt;/strong&gt; basis. Only specific ports are mirrored to the IDS for traffic analysis.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Operation: Redacted - From SSRF to Internal Metadata Access</title>
+        <link>http://localhost:1313/post/offensive/demo-exploit/</link>
+        <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/offensive/demo-exploit/</guid>
+        <description>&lt;img src="http://localhost:1313/post/offensive/demo-exploit/cover.webp" alt="Featured image of post Operation: Redacted - From SSRF to Internal Metadata Access" /&gt;&lt;h3 id=&#34;executive-summary&#34;&gt;Executive Summary
+&lt;/h3&gt;&lt;p&gt;During a routine reconnaissance phase on a private bug bounty program, I identified an Out-of-Band SSRF vulnerability in the PDF generation engine.&lt;/p&gt;
+&lt;h3 id=&#34;the-chain&#34;&gt;The Chain
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Discovery:&lt;/strong&gt; Identified an endpoint &lt;code&gt;/api/v1/generate&lt;/code&gt; accepting a &lt;code&gt;source_url&lt;/code&gt; parameter.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bypass:&lt;/strong&gt; Used a DNS rebinding technique to bypass the internal IP blacklist.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Impact:&lt;/strong&gt; Successfully retrieved AWS metadata credentials from &lt;code&gt;169.254.169.254&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Example payload used&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -X POST &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;https://target.com/api/v1/generate?source_url&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;http://&lt;span style=&#34;color:#f92672&#34;&gt;](&lt;/span&gt;https://target.com/api/v1/generate?source_url&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;http://&lt;span style=&#34;color:#f92672&#34;&gt;)[&lt;/span&gt;redacted&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;.com/metadata
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Developing High-Performance CLI Tools in C&#43;&#43;</title>
+        <link>http://localhost:1313/post/cpp-cli-tool/</link>
+        <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/cpp-cli-tool/</guid>
+        <description>&lt;img src="http://localhost:1313/post/cpp-cli-tool/cover.webp" alt="Featured image of post Developing High-Performance CLI Tools in C&#43;&#43;" /&gt;&lt;h3 id=&#34;why-c&#34;&gt;Why C++?
+&lt;/h3&gt;&lt;p&gt;In offensive security, speed and memory management are everything. When writing a network scanner or a process injector, I need zero-cost abstractions.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Initializing Security Module...&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Low-level logic here
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

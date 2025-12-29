@@ -1,35 +1,71 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on MEDDAH.SYSTEMS</title><link>https://meddah.systems/page/</link><description>Recent content in Pages on MEDDAH.SYSTEMS</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://meddah.systems/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Archives</title><link>https://meddah.systems/page/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://meddah.systems/page/archives/</guid><description/></item><item><title>About Me</title><link>https://meddah.systems/page/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meddah.systems/page/about/</guid><description>&lt;h3 id="the-journey">The Journey
-&lt;/h3>&lt;p>My path into cybersecurity didn&amp;rsquo;t start with a tutorial on &amp;ldquo;how to hack.&amp;rdquo; It started with a terminal, managing servers, and troubleshooting network loops. My background as a &lt;strong>Sysadmin&lt;/strong> taught me how production environments actually breathe, which now gives me a unique advantage in offensive security: &lt;strong>I know what the logs look like on the other side.&lt;/strong>&lt;/p>
-&lt;h3 id="the-vision">The Vision
-&lt;/h3>&lt;p>My objective is the mastery of &lt;strong>End-to-End Offensive Operations&lt;/strong>. I am building toward becoming a well-rounded Red Teamer capable of moving from initial reconnaissance to deep exploitation and impact. I focus on understanding the underlying physics of a network—how data moves and where trust is misplaced—rather than just running automated scripts.&lt;/p>
-&lt;h3 id="philosophy--interests">Philosophy &amp;amp; Interests
-&lt;/h3>&lt;p>I operate on the principle of &lt;strong>deep focus&lt;/strong>. I value non-generic knowledge and the pursuit of technical depth.&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Stoicism&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>J.R.R. Tolkien&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>&amp;ldquo;You have power over your mind — not outside events. Realize this, and you will find strength.&amp;rdquo; — &lt;em>Marcus Aurelius&lt;/em>&lt;/p>
-&lt;/blockquote></description></item><item><title>Technical Stack</title><link>https://meddah.systems/page/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meddah.systems/page/resume/</guid><description>&lt;h3 id="offensive-security">Offensive Security
-&lt;/h3>&lt;ul>
-&lt;li>&lt;strong>Web &amp;amp; Network:&lt;/strong> Reconnaissance, Burp Suite, Web Exploit Chains, OWASP Top 10.&lt;/li>
-&lt;li>&lt;strong>Research:&lt;/strong> Bug Bounty Hunting (HackerOne/Bugcrowd), Vulnerability Discovery.&lt;/li>
-&lt;li>&lt;strong>Environment:&lt;/strong> Infrastructure Misconfigurations, Active Directory, Cloud Security (AWS/Azure).&lt;/li>
-&lt;/ul>
-&lt;h3 id="systems--infrastructure">Systems &amp;amp; Infrastructure
-&lt;/h3>&lt;ul>
-&lt;li>&lt;strong>Operating Systems:&lt;/strong> Linux Internals, Windows Server, Kernel understanding.&lt;/li>
-&lt;li>&lt;strong>Virtualization:&lt;/strong> VMware ESXi, Proxmox, VirtualBox.&lt;/li>
-&lt;li>&lt;strong>Networking:&lt;/strong> TCP/IP, DNS, DHCP, RDP, pfSense, VLANs, Traffic Analysis.&lt;/li>
-&lt;li>&lt;strong>Admin:&lt;/strong> Sysadmin workflows, Server Hardening, Infrastructure as Code.&lt;/li>
-&lt;/ul>
-&lt;h3 id="development--scripting">Development &amp;amp; Scripting
-&lt;/h3>&lt;ul>
-&lt;li>&lt;strong>Primary:&lt;/strong> C++ (Security Tooling, Low-level logic).&lt;/li>
-&lt;li>&lt;strong>Supporting:&lt;/strong> Java (Systems development), Python (Automation), Bash, SQL.&lt;/li>
-&lt;li>&lt;strong>Tooling:&lt;/strong> Git, Vim/CLI-first environment, Markdown.&lt;/li>
-&lt;/ul>
-&lt;h3 id="core-tools">Core Tools
-&lt;/h3>&lt;ul>
-&lt;li>&lt;code>nmap&lt;/code>, &lt;code>wireshark&lt;/code>, &lt;code>metasploit&lt;/code>, &lt;code>ffuf&lt;/code>, &lt;code>hashcat&lt;/code>, &lt;code>gdb&lt;/code>.&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on MEDDAH.SYSTEMS</title>
+        <link>http://localhost:1313/page/</link>
+        <description>Recent content in Pages on MEDDAH.SYSTEMS</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Archives</title>
+        <link>http://localhost:1313/page/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>About Me</title>
+        <link>http://localhost:1313/page/about/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/about/</guid>
+        <description>&lt;h3 id=&#34;the-journey&#34;&gt;The Journey
+&lt;/h3&gt;&lt;p&gt;My path into cybersecurity didn&amp;rsquo;t start with a tutorial on &amp;ldquo;how to hack.&amp;rdquo; It started with a terminal, managing servers, and troubleshooting network loops. My background as a &lt;strong&gt;Sysadmin&lt;/strong&gt; taught me how production environments actually breathe, which now gives me a unique advantage in offensive security: &lt;strong&gt;I know what the logs look like on the other side.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-vision&#34;&gt;The Vision
+&lt;/h3&gt;&lt;p&gt;My objective is the mastery of &lt;strong&gt;End-to-End Offensive Operations&lt;/strong&gt;. I am building toward becoming a well-rounded Red Teamer capable of moving from initial reconnaissance to deep exploitation and impact. I focus on understanding the underlying physics of a network—how data moves and where trust is misplaced—rather than just running automated scripts.&lt;/p&gt;
+&lt;h3 id=&#34;philosophy--interests&#34;&gt;Philosophy &amp;amp; Interests
+&lt;/h3&gt;&lt;p&gt;I operate on the principle of &lt;strong&gt;deep focus&lt;/strong&gt;. I value non-generic knowledge and the pursuit of technical depth.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stoicism&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;J.R.R. Tolkien&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You have power over your mind — not outside events. Realize this, and you will find strength.&amp;rdquo; — &lt;em&gt;Marcus Aurelius&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Technical Stack</title>
+        <link>http://localhost:1313/page/resume/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/resume/</guid>
+        <description>&lt;h3 id=&#34;offensive-security&#34;&gt;Offensive Security
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Web &amp;amp; Network:&lt;/strong&gt; Reconnaissance, Burp Suite, Web Exploit Chains, OWASP Top 10.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Research:&lt;/strong&gt; Bug Bounty Hunting (HackerOne/Bugcrowd), Vulnerability Discovery.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Environment:&lt;/strong&gt; Infrastructure Misconfigurations, Active Directory, Cloud Security (AWS/Azure).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;systems--infrastructure&#34;&gt;Systems &amp;amp; Infrastructure
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Operating Systems:&lt;/strong&gt; Linux Internals, Windows Server, Kernel understanding.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Virtualization:&lt;/strong&gt; VMware ESXi, Proxmox, VirtualBox.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Networking:&lt;/strong&gt; TCP/IP, DNS, DHCP, RDP, pfSense, VLANs, Traffic Analysis.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Admin:&lt;/strong&gt; Sysadmin workflows, Server Hardening, Infrastructure as Code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;development--scripting&#34;&gt;Development &amp;amp; Scripting
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Primary:&lt;/strong&gt; C++ (Security Tooling, Low-level logic).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Supporting:&lt;/strong&gt; Java (Systems development), Python (Automation), Bash, SQL.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tooling:&lt;/strong&gt; Git, Vim/CLI-first environment, Markdown.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;core-tools&#34;&gt;Core Tools
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nmap&lt;/code&gt;, &lt;code&gt;wireshark&lt;/code&gt;, &lt;code&gt;metasploit&lt;/code&gt;, &lt;code&gt;ffuf&lt;/code&gt;, &lt;code&gt;hashcat&lt;/code&gt;, &lt;code&gt;gdb&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
