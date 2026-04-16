@@ -1,7 +1,7 @@
 ---
 title: "When a Signup Form Hands You the Keys to the Kingdom"
 date: 2026-04-16
-description: "A technical breakdown of a recent bug bounty finding."
+description: "A technical breakdown of a recent security research finding."
 tags: ["web", "BOLA", "bug-bounty"]
 categories: ["Offensive"]
 image: "cover.webp" # Optional: add a techy image in this folder later
@@ -9,7 +9,7 @@ image: "cover.webp" # Optional: add a techy image in this folder later
 
 # When a Signup Form Hands You the Keys to the Kingdom
 
-Most bug bounty hunters go after the obvious stuff. Login pages, password resets, file uploads. The classics. I get it, they work. But sometimes the most interesting attack surface is the thing sitting right next to what everyone else is looking at.
+Most security researchers go after the obvious stuff. Login pages, password resets, file uploads. The classics. I get it, they work. But sometimes the most interesting attack surface is the thing sitting right next to what everyone else is looking at.
 
 This is a story about a signup endpoint, a Django misconfiguration, and a chain that went from zero authentication to full platform PII extraction. It was also a duplicate. But we'll get to that.
 
@@ -63,7 +63,7 @@ The **Settings block** exposed the full application configuration as Django had 
 - `AWS_STORAGE_BUCKET_NAME` pointing to a live S3 bucket
 - `DATABASES` containing the PostgreSQL connection string including hostname, port, username, and password for a live EC2-hosted database
 ![Info Disclosure](2_aws_2.png)
-![Info Disclosure 2](2_aws_2.png)
+![Info Disclosure 2](2_aws.png)
 
 These were sitting in plaintext in the response body of a request that required zero authentication.
 
