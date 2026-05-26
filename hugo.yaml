@@ -7,23 +7,37 @@ params:
     mainSections:
         - post
         - offensive
-        - cloud
-        - infrastracture
+        - infrastructure
     featuredImageField: image
+    rssFullContent: true
+
     sidebar:
         emoji: 🛡️
-        subtitle: Security & Networks Infrastracture Engineer
+        subtitle: Security & Networks Infrastructure Engineer
         avatar:
             enabled: true
-            src: img/avatar.png # Put your professional photo or a CLI icon in static/img/
+            local: true
+            src: img/avatar.png
 
     footer:
         copyright: MEDDAH Mohamed // Operational Security
 
-    # Dark mode is mandatory for the vibe
-    defaultTheme: Dark
+    defaultTheme: dark
 
-# MENU NAVIGATION: This is how pros navigate
+    article:
+        headingAnchor: true
+        toc: true
+        readingTime: true
+        license:
+            enabled: false
+
+    dateFormat:
+        published: Jan 02, 2006
+        lastUpdated: Jan 02, 2006 15:04 MST
+
+    comments:
+        enabled: false
+
 menu:
     main:
         - identifier: about
@@ -32,33 +46,33 @@ menu:
           weight: 1
           params:
               icon: user
-        - identifier: Blog
-          name: Blog
-          url: /post/
-          weight: 30
-          params:
-              icon: clock
-        - identifier: Write-ups
+        - identifier: writeups
           name: Write-ups
-          url: /post/Offensive/
-          weight: 20
+          url: /post/offensive/
+          weight: 2
           params:
               icon: messages
+        - identifier: blog
+          name: Blog
+          url: /post/
+          weight: 3
+          params:
+              icon: clock
         - identifier: resume
           name: Resume
           url: /page/resume/
-          weight: 2
+          weight: 4
           params:
               icon: link
         - identifier: certs
           name: Certifications
           url: /page/certs/
-          weight: 3
+          weight: 5
           params:
               icon: hash
         - identifier: archives
           name: Archives
           url: /page/archives/
-          weight: 4
+          weight: 6
           params:
               icon: archives

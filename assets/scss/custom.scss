@@ -1,115 +1,310 @@
 /* ==========================================================================
-   ELITE OPERATOR CUSTOM STYLES
-   Focus: Density, Precision, and System Aesthetics
+   MEDDAH SYSTEMS — Custom Theme Overhaul
+   Palette: Teal / Cyan cyber aesthetic on deep dark
    ========================================================================== */
 
+/* ---------- GOOGLE FONTS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ---------- CSS CUSTOM PROPERTIES ---------- */
 :root {
-    /* Accent color: A sharp, professional "Cyber" Blue or Emerald */
-    --accent-color: #0011ff; 
+    --accent-color: #00d4ff;
     --accent-color-rgb: 0, 212, 255;
+    --accent-secondary: #00ffb3;
+    --accent-secondary-rgb: 0, 255, 179;
+    --glow-sm: 0 0 8px rgba(0, 212, 255, 0.25);
+    --glow-md: 0 0 20px rgba(0, 212, 255, 0.15);
+    --glow-lg: 0 0 40px rgba(0, 212, 255, 0.10);
+    --surface-glass: rgba(255, 255, 255, 0.03);
+    --border-subtle: rgba(0, 212, 255, 0.08);
+    --border-hover: rgba(0, 212, 255, 0.25);
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* 1. FIX: Home Page & Global Text Color for Dark Mode */
-/* Using CSS variables ensures automatic switching via the theme toggle */
-.article-content, 
+/* ---------- GLOBAL TYPOGRAPHY ---------- */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- GLOBAL TEXT COLOR (DARK MODE FIX) ---------- */
+.article-content,
 .article-details,
 .article-title,
 .main-article {
     color: var(--card-text-color-main) !important;
 }
 
-/* 2. TERMINAL AESTHETIC FOR CODE BLOCKS */
-/* Makes your C++ and CLI snippets look like a real console */
-code {
-    font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace !important;
+/* ---------- CODE / TERMINAL TYPOGRAPHY ---------- */
+code,
+pre,
+.highlight code {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace !important;
     font-variant-ligatures: contextual;
+    font-size: 0.88rem;
 }
 
+/* ---------- TERMINAL CODE BLOCKS ---------- */
 .highlight {
-    border-radius: 8px;
-    border: 1px solid rgba(var(--accent-color-rgb), 0.2);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    
-    /* Subtle scanline effect on code blocks */
-    background: linear-gradient(
-        rgba(18, 16, 16, 0) 50%, 
-        rgba(0, 0, 0, 0.1) 50%
-    ), linear-gradient(
-        90deg, 
-        rgba(255, 0, 0, 0.03), 
-        rgba(0, 255, 0, 0.01), 
-        rgba(0, 0, 255, 0.03)
-    );
-    background-size: 100% 2px, 3px 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--glow-sm), 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.4s var(--transition-smooth);
 }
 
-/* 3. "OPERATOR" SIDEBAR MODS */
-/* Adds a subtle glow to the active menu item */
-.menu li.current {
-    border-left: 3px solid var(--accent-color);
-    background: linear-gradient(90deg, rgba(var(--accent-color-rgb), 0.1) 0%, transparent 100%);
-    
-    a {
-        color: var(--accent-color) !important;
-        font-weight: 700;
-        letter-spacing: 0.5px;
+.highlight:hover {
+    box-shadow: var(--glow-md), 0 8px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--border-hover);
+}
+
+/* Terminal dot decorations */
+.highlight::before {
+    content: '● ● ●';
+    display: block;
+    padding: 8px 14px 4px;
+    font-size: 0.55rem;
+    letter-spacing: 4px;
+    color: rgba(var(--accent-color-rgb), 0.35);
+    user-select: none;
+    pointer-events: none;
+}
+
+/* ---------- ARTICLE CARDS ---------- */
+.article-list article {
+    transition: transform 0.35s var(--transition-smooth),
+                box-shadow 0.35s var(--transition-smooth),
+                border-color 0.35s var(--transition-smooth);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--surface-glass);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.article-list article:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--glow-md), 0 16px 40px rgba(0, 0, 0, 0.25);
+    border-color: var(--border-hover);
+}
+
+/* Staggered fade-in animation for article list items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* 4. TACTICAL TABLES (Resume/Certs) */
-/* Cleans up the tables to look like a data readout */
+.article-list article {
+    animation: fadeInUp 0.5s var(--transition-smooth) backwards;
+}
+
+.article-list article:nth-child(1) { animation-delay: 0.05s; }
+.article-list article:nth-child(2) { animation-delay: 0.12s; }
+.article-list article:nth-child(3) { animation-delay: 0.19s; }
+.article-list article:nth-child(4) { animation-delay: 0.26s; }
+.article-list article:nth-child(5) { animation-delay: 0.33s; }
+.article-list article:nth-child(6) { animation-delay: 0.40s; }
+
+/* ---------- ARTICLE CONTENT IMAGES ---------- */
+.article-content img {
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    transition: box-shadow 0.3s var(--transition-smooth), border-color 0.3s var(--transition-smooth);
+}
+
+.article-content img:hover {
+    box-shadow: var(--glow-md);
+    border-color: var(--border-hover);
+}
+
+/* ---------- SIDEBAR ENHANCEMENTS ---------- */
+
+/* Avatar glow ring */
+.left-sidebar .sidebar-avatar {
+    position: relative;
+}
+
+.left-sidebar .sidebar-avatar .site-avatar {
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.15),
+                var(--glow-sm);
+    transition: box-shadow 0.4s var(--transition-smooth);
+}
+
+.left-sidebar .sidebar-avatar .site-avatar:hover {
+    box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.35),
+                var(--glow-md);
+}
+
+/* Active sidebar menu item */
+.menu li.current {
+    border-left: 3px solid var(--accent-color);
+    background: linear-gradient(90deg, rgba(var(--accent-color-rgb), 0.08) 0%, transparent 100%);
+    border-radius: 0 8px 8px 0;
+
+    a {
+        color: var(--accent-color) !important;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+}
+
+/* Menu hover animation */
+.menu li {
+    transition: background 0.25s var(--transition-smooth),
+                border-color 0.25s var(--transition-smooth);
+    border-left: 3px solid transparent;
+    border-radius: 0 8px 8px 0;
+}
+
+.menu li:hover {
+    background: linear-gradient(90deg, rgba(var(--accent-color-rgb), 0.04) 0%, transparent 100%);
+    border-left-color: rgba(var(--accent-color-rgb), 0.3);
+}
+
+/* ---------- TAG & CATEGORY BADGES ---------- */
+.article-category a,
+.article-tags a {
+    transition: background 0.25s var(--transition-smooth),
+                color 0.25s var(--transition-smooth),
+                box-shadow 0.25s var(--transition-smooth);
+    border-radius: 6px;
+}
+
+.article-category a:hover,
+.article-tags a:hover {
+    background: rgba(var(--accent-color-rgb), 0.12) !important;
+    color: var(--accent-color) !important;
+    box-shadow: var(--glow-sm);
+}
+
+/* Right sidebar tag cloud */
+.tagCloud .tagCloud-tags a {
+    transition: background 0.25s var(--transition-smooth),
+                color 0.25s var(--transition-smooth),
+                box-shadow 0.25s var(--transition-smooth);
+    border-radius: 6px;
+}
+
+.tagCloud .tagCloud-tags a:hover {
+    background: rgba(var(--accent-color-rgb), 0.12) !important;
+    color: var(--accent-color) !important;
+    box-shadow: var(--glow-sm);
+}
+
+/* ---------- TABLES (Resume / Certs) ---------- */
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 20px 0;
-    font-size: 0.95rem;
+    margin: 24px 0;
+    font-size: 0.93rem;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th {
     text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    border-bottom: 2px solid var(--accent-color);
-    padding: 10px;
-}
-
-td {
-    padding: 12px 10px;
-    border-bottom: 1px solid rgba(var(--accent-color-rgb), 0.1);
-}
-
-/* 5. BLOCKQUOTE UPGRADE (For your Stoic quotes) */
-blockquote {
-    border-left: 4px solid var(--accent-color) !important;
-    background: rgba(var(--accent-color-rgb), 0.05);
-    font-style: italic;
-    padding: 15px 25px;
-    margin: 20px 0;
-    position: relative;
-}
-
-blockquote::before {
-    content: "“";
-    font-size: 3rem;
-    position: absolute;
-    left: 10px;
-    top: -10px;
-    opacity: 0.1;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    border-bottom: 2px solid rgba(var(--accent-color-rgb), 0.3);
+    padding: 12px 14px;
     color: var(--accent-color);
 }
 
-/* 6. SUBTLE HOVER ANIMATIONS */
-/* Makes the site feel responsive and high-end */
-.article-list article {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background 0.2s ease;
 }
 
-.article-list article:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+tr:hover td {
+    background: rgba(var(--accent-color-rgb), 0.03);
 }
 
-/* 7. CUSTOM SCROLLBAR (Chrome/Safari) */
+/* ---------- BLOCKQUOTES ---------- */
+blockquote {
+    border-left: 4px solid var(--accent-color) !important;
+    background: rgba(var(--accent-color-rgb), 0.04);
+    font-style: italic;
+    padding: 18px 28px;
+    margin: 24px 0;
+    position: relative;
+    border-radius: 0 10px 10px 0;
+    transition: background 0.3s var(--transition-smooth);
+}
+
+blockquote:hover {
+    background: rgba(var(--accent-color-rgb), 0.06);
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 3.5rem;
+    position: absolute;
+    left: 12px;
+    top: -8px;
+    opacity: 0.08;
+    color: var(--accent-color);
+    font-family: 'Inter', serif;
+    font-weight: 800;
+}
+
+/* ---------- LINKS ---------- */
+.article-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(var(--accent-color-rgb), 0.2);
+    transition: border-color 0.25s var(--transition-smooth),
+                color 0.25s var(--transition-smooth);
+}
+
+.article-content a:hover {
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-secondary);
+}
+
+/* ---------- HORIZONTAL RULES ---------- */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(var(--accent-color-rgb), 0.25) 50%,
+        transparent 100%
+    );
+    margin: 32px 0;
+}
+
+/* ---------- SELECTION HIGHLIGHT ---------- */
+::selection {
+    background: rgba(var(--accent-color-rgb), 0.25);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(var(--accent-color-rgb), 0.25);
+    color: #fff;
+}
+
+/* ---------- CUSTOM SCROLLBAR (Webkit) ---------- */
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -119,10 +314,73 @@ blockquote::before {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(var(--accent-color-rgb), 0.3);
+    background: rgba(var(--accent-color-rgb), 0.2);
     border-radius: 10px;
+    transition: background 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-color);
+    background: rgba(var(--accent-color-rgb), 0.5);
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 212, 255, 0.2) transparent;
+}
+
+/* ---------- PAGE TITLE STYLING ---------- */
+.article-page .article-title {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.footer:hover {
+    opacity: 1;
+}
+
+/* ---------- PAGINATION ---------- */
+.pagination .page-link {
+    border-radius: 8px;
+    transition: background 0.25s var(--transition-smooth),
+                box-shadow 0.25s var(--transition-smooth);
+}
+
+.pagination .page-link:hover {
+    box-shadow: var(--glow-sm);
+}
+
+/* ---------- READING TIME & META ---------- */
+.article-time,
+.article-translations,
+.article-category {
+    font-size: 0.83rem;
+    letter-spacing: 0.3px;
+    opacity: 0.8;
+}
+
+/* ---------- RESPONSIVE POLISH ---------- */
+@media (max-width: 768px) {
+    .article-list article:hover {
+        transform: translateY(-3px);
+    }
+
+    .highlight::before {
+        padding: 6px 10px 2px;
+        font-size: 0.5rem;
+    }
+}
+
+/* ---------- SMOOTH PAGE TRANSITIONS ---------- */
+main {
+    animation: fadeInUp 0.4s var(--transition-smooth);
 }
