@@ -308,3 +308,5 @@ These attack vectors represent an active area of research in datacenter security
 - Dinesh Dutt, *Cloud Native Data Center Networking*, O'Reilly Media, 2019
 - Cisco VXLAN BGP EVPN Design and Deployment Guide (Cisco Validated Design)
 - [FRRouting Documentation](https://docs.frrouting.org/)
+
+**Source code**: The full project (configs, scripts, GNS3 topology, and diagrams) is available on GitHub: [mrmeddah/evpn-vxlan-datacenter-fabric](https://github.com/mrmeddah/evpn-vxlan-datacenter-fabric)
