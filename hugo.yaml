@@ -109,6 +109,18 @@ menu:
           weight: 2
           params:
               icon: shield
+        - identifier: github
+          name: GitHub
+          url: https://github.com/mrmeddah
+          weight: 3
+          params:
+              icon: brand-github
+        - identifier: linkedin
+          name: LinkedIn
+          url: https://linkedin.com/in/meddah
+          weight: 4
+          params:
+              icon: brand-linkedin
 
 markup:
   goldmark:
