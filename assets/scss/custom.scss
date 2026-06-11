@@ -485,4 +485,15 @@ blockquote::before {
     .article-content h4, .article-content h5 {
         font-size: 1.1rem !important;
     }
+
+    /* Fix oversized code blocks on mobile */
+    code, pre, .highlight code {
+        font-size: 0.85rem !important;
+    }
+
+    /* Ensure images take up full available width on mobile */
+    .article-content img {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
