@@ -1,21 +1,118 @@
 ---
 title: "Resume"
-layout: "page"
+url: "/page/resume/"
 ---
 
-## 🧑‍💻 MEDDAH Mohamed
-
-**Cybersecurity & Network Infrastructure Engineer**
-
-📍 Marrakech, Morocco · 🌍 Open to international mobility
-📧 mrmeddah@yahoo.com
-🔗 [linkedin.com/in/meddah](https://linkedin.com/in/meddah) · [github.com/mrmeddah](https://github.com/mrmeddah) · [meddah.systems](https://meddah.systems)
+📄 [Download PDF version](https://meddah.systems/cv)
 
 ---
 
-## 🎯 Profile
+## Mohamed MEDDAH
 
-Final-year cybersecurity engineering student (Bac+5), specialized in **offensive security**, **network infrastructure**, and **cloud security**. Active bug bounty hunter on HackerOne, Intigriti, and Bugcrowd with confirmed findings on production targets. Deployed 70+ AWS services via Terraform on a real account; built a Zero-Trust storage system from scratch.
+**Cybersecurity Engineer | Cloud Security | Offensive Security**
+
+📍 Marrakech, Morocco · 🌍 Open to relocation · Open to remote
+📧 mohamed@meddah.systems · [linkedin.com/in/meddah](https://linkedin.com/in/meddah) · [github.com/mrmeddah](https://github.com/mrmeddah) · [meddah.systems](https://meddah.systems)
+
+---
+
+## 🎯 Professional Summary
+
+Final-year Cybersecurity Engineering student (Bac+5 / Master's equivalent, Bologna Process EQF Level 7, expected Jun. 2027) with confirmed production bug bounty impact and cloud security tooling across Azure and AWS. Proven across offensive web and API testing, Azure RBAC privilege escalation research, and DORA-aligned defensive tooling. Proficient in English (C1) and French (B2). Seeking PFE internship in EU regulated environments from February 2027.
+
+---
+
+## 🛠️ Technical Skills
+
+**Offensive Security:** Penetration Testing, Web Application Security, API Security, SSRF, IDOR/BOLA, OAuth 2.0 Exploitation, GraphQL Security, Subdomain Enumeration, AD Attacks, NTLM Relay, ADCS Abuse, LFI
+
+**Cloud Security — Azure:** Security Posture Management, Defender for Cloud, Microsoft Entra ID, Conditional Access, Managed Identities, Azure RBAC, Key Vault, Azure Functions, ARM Templates, Azure Monitor
+
+**Cloud Security — AWS:** EC2, VPC, IAM, S3, RDS, Secrets Manager, CloudTrail, Security Hub, GuardDuty, 70+ services via Terraform IaC
+
+**Frameworks & Standards:** OWASP Top 10, OWASP API Security Top 10, MITRE ATT&CK, CWE, Zero Trust, DORA, NIS2, ISO 27001
+
+**Network:** TCP/IP, BGP, OSPF, VXLAN/EVPN, VLANs, pfSense, Site-to-Site VPN, GNS3, Wireshark (CCNA/CCNP level)
+
+**Security Tools:** Burp Suite Professional, Nmap, Subfinder, Amass, httpx, Feroxbuster, ffuf, Shodan, truffleHog, BloodHound, Metasploit
+
+**Development:** Python, Bash, JavaScript, Java, Go, C++, Django, React, Node.js
+
+**Systems:** Linux (Debian/Ubuntu/Kali), Windows Server, Active Directory, Docker
+
+---
+
+## 💼 Professional Experience
+
+### Independent Contractor — Data Curator
+**Veeva Systems** · Remote · Mar. 2024 – Sep. 2024
+
+- Processed and validated large-scale structured datasets for pharmaceutical CRM pipelines; maintained data integrity and compliance standards across a multi-client regulated environment, directly applicable to NIS2/DORA data governance requirements.
+
+### IT Infrastructure Intern
+**Menara Prefa** · Marrakech, Morocco · April 2024
+
+- Deployed and configured pfSense firewall (packet filtering, NAT, segmentation); implemented site-to-site VPN using IPsec tunnelling.
+
+### Development & Systems Administration Intern
+**Municipality of El Kelaa des Sraghna** · El Kelaa, Morocco · August 2023
+
+- Built full-stack citizen ticket management application integrated with the national Chikaya platform; RBAC-based routing; Django REST / React / relational DB; Windows Server and Linux administration.
+
+---
+
+## 🏗️ Projects
+
+### Azure RBAC Privilege Escalation Mapper
+*Python | Azure SDK | Microsoft Graph API | Azure Functions · September 2026*
+
+- Enumerates multi-hop Azure privilege escalation paths via RBAC misconfiguration; detects the runCommand/IMDS token theft chain — a Defender for Cloud blind spot.
+- Maps four attack primitives: Run Command abuse, Custom Script Extension backdoor, Role Assignment write escalation, User Data injection; outputs attacker-ready PoC commands with inline DORA Article 9 and CSSF regulatory citations.
+
+### Azure Deployment History Sanitizer
+*Python | Azure Functions | ARM API | Shannon Entropy Analysis · July 2026*
+
+- Serverless tool purging ARM/Bicep deployment histories that expose plaintext secrets to any Reader-level account; Shannon entropy + keyword heuristics detect credentials, SAS tokens, and connection strings.
+- Three modes: aggressive purge, selective entropy-based, and audit-only; full audit trail to Azure Storage Tables for DORA compliance and CSSF audit readiness.
+
+### Zero-Trust Distributed Storage System
+*Go | Java | libsodium | AES-256-GCM | ABE | JWT · May 2026*
+
+- Mini-IPFS with client-side AES-256-GCM encryption (libsodium), Merkle DAG integrity, 3-node replication, and cryptographic access control via Attribute-Based Encryption and Proxy Re-Encryption; JWT Ed25519 PoP tokens with nonce-based anti-replay (TTL 30s).
+
+### AWS Cloud Infrastructure (Terraform IaC)
+*Terraform | AWS | IAM | VPC | Secrets Manager · Feb. 2025*
+
+- Provisioned 70+ AWS services via modular Terraform on a live account: least-privilege IAM policies, Secrets Manager integration, multi-service network architecture across EC2, RDS, VPC, S3, and 60+ additional services.
+
+### EVPN/VXLAN Spine-Leaf Datacenter Fabric
+*FRRouting | GNS3 | BGP EVPN | Linux iproute2 · 2026*
+
+- Deployed EVPN/VXLAN overlay on GNS3 with FRRouting (BGP EVPN, OSPF underlay), Route Reflector, and MP-BGP L2VPN; validated MAC/IP distribution via Wireshark; identified VXLAN attack surface: BGP EVPN route poisoning and frame injection via underlay access.
+
+---
+
+## 🐛 Bug Bounty & Security Research
+
+**Active Researcher — HackerOne | Intigriti | Bugcrowd** (public and private programs) · Mar. 2024 – Present
+
+| Severity | Finding |
+|----------|---------|
+| **Critical (CVSS 9.1)** | Unauthenticated account creation chained with Django DEBUG mode leaking cloud credentials and JWT secrets, then BOLA/IDOR to full attendee PII exfiltration (CWE-200, CWE-284) |
+| **High — OAuth ATO** | redirect_uri validation bypass on GitLab SSO flow — 1-click account takeover on an artifact repository via authorization code grant misconfiguration |
+| **High — SSRF** | Host Header auth bypass on a global advertising platform; reached live Kubernetes microservice returning production data (CWE-918) |
+| **Medium — Info Disclosure** | Exposed Swagger UI, Spring Boot Actuator, internal IP leakage on enterprise IoT/B2B SaaS; extracted API constants from obfuscated JS bundles |
+| **Medium — Credential Exposure** | Unauthenticated AI API keys, search credentials, and internal endpoints live on global e-commerce infrastructure (CWE-548) |
+| **Medium — Admin Exposure** | JBoss/WildFly admin console on telecoms infrastructure; AD FS and WS-Trust endpoint enumeration with timing analysis |
+
+**Methodology:** Subfinder, Amass, httpx, Shodan, Feroxbuster, ffuf, gau, Katana, truffleHog, Burp Suite Professional; OWASP Top 10, OWASP API Security Top 10, CWE classification.
+
+---
+
+## 🏁 CTF & Labs
+
+- **SecDojo National CTF:** Ranked #100 / 3,500+ participants — top 3% nationally. Techniques: LSASS credential dump, BloodHound attack paths, ADCS ESC11, NTLM relay.
+- **MCP/Prompt Injection Lab (NebulaAssist):** Full attack chain — Nmap recon, SSE token extraction, hidden tool enumeration via prompt injection.
 
 ---
 
@@ -23,133 +120,18 @@ Final-year cybersecurity engineering student (Bac+5), specialized in **offensive
 
 | Period | Degree | Institution |
 |--------|--------|-------------|
-| 2024 – 2027 | **State Engineer in Cybersecurity & Network Infrastructure** (Bac+5) | EMSI — École Marocaine des Sciences de l'Ingénieur, Marrakech |
-| 2022 – 2024 | **Specialized Technician — Network & Systems Administration** | ISTA — OFPPT, Marrakech |
-
----
-
-## 💼 Experience
-
-### Freelance Contractor — Data Curator
-**Veeva Systems** · Remote · Mar – Sep 2024
-
-- Processing and validation of large-scale structured datasets for pharmaceutical CRM pipelines
-- Maintained data integrity and compliance standards in a multi-client environment
-
-### IT Infrastructure Intern
-**Menara Prefa** · Marrakech · Apr 2024
-
-- Deployed and configured a pfSense firewall: filtering rules, NAT, network segmentation, traffic monitoring
-- Set up a site-to-site VPN for inter-site corporate connectivity
-
-### Development & Systems Administration Intern
-**Municipality El Kelaa des Sraghna** · 2023
-
-- Built a full-stack citizen ticket management app integrated with the national Chikaya platform, with automatic routing to relevant departments
-- **Stack:** Django (REST backend), React (frontend), relational database
-- Windows Server and Linux systems administration and network diagnostics
-
----
-
-## 🏗️ Projects
-
-### 🔒 Zero-Trust Distributed Storage System
-[github.com/mrmeddah](https://github.com/mrmeddah) · May 2026
-
-- Mini-IPFS with AES-256-GCM client-side encryption (libsodium), Merkle DAG integrity verification, 3-node replication
-- Zero-Trust auth: JWT Ed25519 Proof-of-Possession, stateless tokens scoped per operation and CID, nonce anti-replay (30s TTL)
-- Cryptographic access control via ABE (Attribute-Based Encryption) & Proxy Re-Encryption — no master key exposure
-- 6 security objectives validated (PASS): passive eavesdropping, tampering, node collusion
-- **Stack:** Go, Java Sockets, libsodium, SHA-256, X25519/ECDH
-
-### 🌐 EVPN/VXLAN Fabric — Modern Datacenter VPN
-[github.com/mrmeddah](https://github.com/mrmeddah) · 2026
-
-- EVPN/VXLAN Spine-Leaf overlay on GNS3 with Linux nodes and FRRouting (BGP EVPN, OSPF underlay)
-- VTEP config, Route Reflector, MP-BGP L2VPN EVPN, Linux bridge/VXLAN datapath; Wireshark validation
-- Attack surface identification: no native encryption, BGP EVPN poisoning, frame injection vectors
-- **Stack:** FRRouting, GNS3, Linux iproute2, Wireshark, BGP/OSPF
-
-### ☁️ AWS Cloud Infrastructure — Terraform
-Personal project
-
-- Provisioned 70+ AWS services via modular Terraform on a real account (RDS, EC2, VPC, IAM, Secrets Manager, S3…)
-- Least-privilege IAM policies, Secrets Manager integration, multi-service network architecture
-
-### 💬 ChainTalk B2B — Web2.5 Blockchain Chat
-Personal project
-
-- Real-time messaging app with blockchain integration
-- **Stack:** React 18, Vite, TailwindCSS, Ethers.js, Node.js, Express, Socket.io, PostgreSQL, Solidity, Hardhat
-
----
-
-## 🐛 Bug Bounty & Security Research
-
-Active hunter on **HackerOne**, **Intigriti**, **Bugcrowd** (public & private programs)
-
-| Target | Platform | Finding |
-|--------|----------|---------|
-| **Yahoo** | Intigriti | Unauthenticated internal SSRF via Host Header auth bypass on Prebid Server; accessed internal Kubernetes microservice `goldfinger--staging-use1:4080` with real ad data (CWE-918) |
-| **SFS Group** | Intigriti · High | OAuth `redirect_uri` validation bypass on GitLab SSO → 1-click Account Takeover on JFrog Artifactory |
-| **SFS Group** | Intigriti · Critical 9.1 | Chain: unauth account creation → Django DEBUG in prod (leaked AWS keys, PostgreSQL creds, JWT) → platform-wide BOLA → attendee PII exfiltration (CWE-200 / CWE-284) |
-| **T-Mobile / USCellular** | Bugcrowd | Exposed Swagger UI, Spring Boot Actuator endpoints, internal IP leakage — Nokia WING/JHipster stack |
-| **Vodafone Oman** | Intigriti | Exposed WildFly/JBoss admin interface; API constants extracted from React B2B JS bundle; AD FS / WS-Trust analysis |
-| **Verisign** | Bugcrowd | MCP server exposure, tunnel endpoints, subdomain leakage via CSP |
-| **Watsons / AS Watson** | Intigriti | Unauthenticated credential exposure — AI API key, Algolia key, internal endpoints (CWE-548) |
-| **Whatnot** | HackerOne | GraphQL authorization testing and IDOR |
-
-**Toolbox:** subfinder, amass, httpx, Shodan, feroxbuster, ffuf, gau, katana, truffleHog, Burp Suite
-
----
-
-## 🏁 CTF & Labs
-
-- **CTF National SecDojo** — Ranked #100 / 3,500+ participants; all challenges solved except one AD scenario
-- **Active Directory Lab (AD105)** — Multi-forest, LSASS dump, BloodHound, ADCS ESC11, NTLM relay, hash extraction
-- **MCP/Prompt Injection Lab (NebulaAssist)** — Full chain: nmap → SSE token extraction → hidden tool enumeration
-- **Unicode Steganography CTF** — Solved
-
----
-
-## 🖥️ Virtualization & Monitoring
-
-### Hypervisors
-- VMware ESXi & Proxmox VE: VM deployment, resource management, snapshots, migration
-- GNS3 with VM integration for complex network topologies (OSPF, BGP, VXLAN/EVPN)
-- Packet Tracer for Cisco network config validation
-
-### Monitoring & Observability
-- **Zabbix**: router & switch supervision, SNMP MIB performance metrics on Linux
-- **Grafana**: custom SOC dashboard — real-time network performance (CPU, bandwidth, interface availability)
-- **Splunk**: log ingestion and security event correlation
-- **pfSense**: network monitoring, traffic filtering, firewall rules, intrusion alerts
-
----
-
-## 🛠️ Technical Skills
-
-| Domain | Skills |
-|--------|--------|
-| **Offensive Security** | Recon, enumeration, misconfigurations, LFI, server-side vulns, API security, GraphQL, AD attacks, NTLM relay, ADCS abuse |
-| **Infrastructure** | TCP/IP, DNS, DHCP, VLANs, VPN, pfSense, OSPF, BGP, EVPN/VXLAN |
-| **Cloud** | AWS (70+ services), Terraform, IAM, VPC, S3, RDS, Secrets Manager |
-| **Development** | C++ (security tooling), Java, Python, Go, Bash, SQL, Django, React |
-| **Virtualization** | VMware ESXi, Proxmox, GNS3, VirtualBox |
-| **Monitoring** | Zabbix, Grafana, Splunk, pfSense |
-| **Tools** | nmap, Wireshark, Metasploit, ffuf, hashcat, gdb, Burp Suite, BloodHound |
+| 2024 – Jun. 2027 (expected) | State Engineer's Degree in Cybersecurity & Network Infrastructure — Bac+5 / EQF Level 7 | EMSI — École Marocaine des Sciences de l'Ingénieur, Marrakech |
+| 2022 – 2024 | Specialized Technician Diploma — Network & Systems Administration | ISTA — Institut Spécialisé de Technologie Appliquée (OFPPT), Marrakech |
 
 ---
 
 ## 📜 Certifications
 
-| Certificate | Issuer | Date |
-|-------------|--------|------|
-| Fundamentals of Blockchain Architecture | LearnQuest | Apr 2026 |
-| Introduction to Cloud Computing | IBM | Nov 2025 |
-| Introduction to NoSQL Databases | IBM | Dec 2025 |
-| Introduction to DevOps | IBM | Jan 2025 |
-| Basics of Cisco Networking | LearnQuest | Dec 2024 |
+| Certification | Issuer | Date |
+|---------------|--------|------|
+| AWS Certified Cloud Practitioner (CLF-C02) | Amazon Web Services | Jul. 2026 |
+| Microsoft Certified: Cloud & AI Security Engineer Associate (SC-500) | Microsoft | Sep. 2026 |
+| AWS Certified Solutions Architect — Associate (SAA-C03) | Amazon Web Services | Oct. 2026 |
 
 ---
 
@@ -157,10 +139,6 @@ Active hunter on **HackerOne**, **Intigriti**, **Bugcrowd** (public & private pr
 
 | Language | Level |
 |----------|-------|
-| Arabic (Darija) | Native |
-| French | Professional |
-| English | Professional |
-
----
-
-> *References and project documentation available on request.*
+| Arabic | Native |
+| French | Professional proficiency (CEFR B2) |
+| English | Professional proficiency (CEFR C1) |
