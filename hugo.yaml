@@ -96,6 +96,19 @@ menu:
           weight: 8
           params:
               icon: hash
+    social:
+        - identifier: pgp
+          name: PGP Public Key
+          url: /pgp.asc
+          weight: 1
+          params:
+              icon: key
+        - identifier: security
+          name: Security Policy
+          url: /.well-known/security.txt
+          weight: 2
+          params:
+              icon: shield
 
 markup:
   goldmark:
