@@ -17,7 +17,7 @@ params:
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            src: img/avatar.webp
 
     footer:
         copyright: MEDDAH Mohamed // Operational Security

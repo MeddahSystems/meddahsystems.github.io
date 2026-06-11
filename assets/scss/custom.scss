@@ -497,3 +497,12 @@ blockquote::before {
         height: auto !important;
     }
 }
+
+/* ---------- 8. ACCESSIBILITY FIXES ---------- */
+.article-category a,
+.article-tags a,
+.widget--tags .tag-cloud-tags a {
+    color: #000000 !important;
+    background-color: var(--accent-secondary) !important;
+    font-weight: 700 !important;
+}
