@@ -19,6 +19,12 @@ params:
             local: true
             src: img/avatar.webp
 
+    defaultImage:
+        opengraph:
+            enabled: true
+            local: true
+            src: img/og.webp
+
     footer:
         copyright: MEDDAH Mohamed // Operational Security
 
