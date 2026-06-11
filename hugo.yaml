@@ -22,7 +22,9 @@ params:
     footer:
         copyright: MEDDAH Mohamed // Operational Security
 
-    colorScheme: dark
+    colorScheme:
+        toggle: false
+        default: dark
 
     article:
         headingAnchor: true
