@@ -1,0 +1,4 @@
+Contact: mailto:mohamed@meddah.systems
+Encryption: https://meddah.systems/pgp.asc
+Preferred-Languages: en, fr
+Expires: 2027-12-31T23:59:59.000Z
