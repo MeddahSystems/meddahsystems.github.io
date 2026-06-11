@@ -84,6 +84,12 @@ menu:
           weight: 7
           params:
               icon: link
+        - identifier: rss
+          name: RSS Feed
+          url: /index.xml
+          weight: 8
+          params:
+              icon: hash
 
 markup:
   goldmark:

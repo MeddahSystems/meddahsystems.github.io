@@ -13,3 +13,5 @@ url: "/page/contact/"
 For security research inquiries, project collaborations, or professional 
 opportunities — email is the best channel. Response time is usually within 
 48 hours.
+
+🔐 [Download PGP Public Key](/pgp.asc)
