@@ -76,3 +76,8 @@ menu:
           weight: 6
           params:
               icon: archives
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
