@@ -462,3 +462,27 @@ blockquote::before {
 #dark-mode-toggle {
     display: none !important;
 }
+
+/* ---------- 7. MOBILE RESPONSIVENESS ---------- */
+@media (max-width: 768px) {
+    /* Scale down oversized headers on mobile */
+    .article-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .article-content h1 {
+        font-size: 1.6rem !important;
+    }
+    
+    .article-content h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    .article-content h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .article-content h4, .article-content h5 {
+        font-size: 1.1rem !important;
+    }
+}
