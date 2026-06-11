@@ -49,7 +49,7 @@ pre,
 .highlight code {
     font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace !important;
     font-variant-ligatures: contextual;
-    font-size: 1.05rem;
+    font-size: 1em;
 }
 
 /* ---------- TERMINAL CODE BLOCKS ---------- */
@@ -414,28 +414,6 @@ h1, h2, .article-title {
     color: inherit;
 }
 
-/* ---------- 3. TERMINAL-STYLE TABLES ---------- */
-table {
-    border: 1px solid var(--border-subtle);
-    background: var(--surface-glass);
-    box-shadow: var(--glow-sm);
-}
-
-th {
-    background: rgba(var(--accent-color-rgb), 0.1);
-    font-family: "JetBrains Mono", monospace;
-    border-bottom: 2px solid var(--accent-color);
-}
-
-td {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.85rem;
-}
-
-tr:hover td {
-    background: rgba(var(--accent-color-rgb), 0.08);
-    box-shadow: inset 3px 0 0 var(--accent-color);
-}
 
 /* ---------- 4. INTERACTIVE LINKS & BADGES ---------- */
 .article-content a:not(.article-tags a):not(.article-category a) {
