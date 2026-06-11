@@ -2,4 +2,4 @@
 title: "Latest Research & Operations"
 layout: "home"
 ---
-This space serves as a repo for the work done by **MEDDAH Mohamed**
+Security research, cloud security tooling, and technical write-ups by Mohamed Meddah — Cybersecurity Engineer specializing in Cloud, offensive security, and Infra defensive tooling.

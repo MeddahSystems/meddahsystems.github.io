@@ -1,6 +1,7 @@
 ---
 title: "Resume"
 url: "/page/resume/"
+description: "mohamed@meddah.systems"
 ---
 
 📄 [Download PDF version](https://meddah.systems/cv)

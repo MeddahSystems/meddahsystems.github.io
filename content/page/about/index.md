@@ -1,21 +1,40 @@
 ---
-title: "About Me"
-layout: "page"
+title: "About"
 ---
 
-### The Journey
+### The Foundation
 
-My path into cybersecurity didn't start with a tutorial on "how to hack." It started with a terminal, managing servers, and troubleshooting network loops. My background as a **Sysadmin** taught me how production environments actually breathe — which now gives me a unique advantage in offensive security: **I know what the logs look like on the other side.**
+Cybersecurity came through infrastructure. Before learning the offensive side of systems, 
+I learned how they were built, managing servers, configuring networks, 
+troubleshooting production environments. That background changed how 
+I read attack surfaces: I look for what's trusted, what's assumed, and what 
+nobody thought to question.
 
-### The Vision
+### Where I'm Headed
 
-My objective is the mastery of **End-to-End Offensive Operations**. I am building toward becoming a well-rounded Red Teamer capable of moving from initial reconnaissance to deep exploitation and impact. I focus on understanding the underlying physics of a network — how data moves and where trust is misplaced — rather than just running automated scripts.
+The goal is to be genuinely good at the full stack, from on-premises 
+infrastructure to cloud architecture, from exploitation to detection. Not 
+surface-level familiar with everything, but deeply capable across the 
+offensive and defensive boundary. That takes time and I'm not in a rush 
+to pretend otherwise.
 
-### Philosophy & Interests
+Right now that means cloud security research, privilege escalation tooling, 
+and active researcher on HackerOne, Intigriti, and Bugcrowd. 
+Confirmed findings on production targets. Learning something new on every 
+program.
 
-I operate on the principle of **deep focus**. I value non-generic knowledge and the pursuit of technical depth.
+### Why Research
 
-- **Stoicism** — principles over reactions
-- **J.R.R. Tolkien** — the long road is the one worth taking
+Not just for the money. Because a well-chained attack against a real production 
+system is one of the most honest technical puzzles that exists. Either it 
+works or it doesn't. The target doesn't grade on effort.
 
-> "You have power over your mind — not outside events. Realize this, and you will find strength." — *Marcus Aurelius*
+That honesty is what keeps it interesting. Security is one of the few fields 
+where staying shallow gets punished quickly and going deep always pays off. 
+That's the only environment worth working in.
+
+### This Site
+
+A working log. Write-ups, tooling, notes... things worth documenting because 
+they taught me something non-obvious. Nothing published until it's worth 
+reading.

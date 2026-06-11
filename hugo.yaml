@@ -13,7 +13,7 @@ params:
 
     sidebar:
         emoji: 🛡️
-        subtitle: Security & Networks Infrastructure Engineer
+        subtitle: Cybersecurity Engineer | Cloud Security | Offensive Security
         avatar:
             enabled: true
             local: true
@@ -76,6 +76,12 @@ menu:
           weight: 6
           params:
               icon: archives
+        - identifier: contact
+          name: Contact
+          url: /page/contact/
+          weight: 7
+          params:
+              icon: link
 
 markup:
   goldmark:
