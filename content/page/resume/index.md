@@ -4,92 +4,88 @@ url: "/page/resume/"
 description: "mohamed@meddah.systems"
 ---
 
-📄 [Download PDF version](https://meddah.systems/cv)
+📄 [Download PDF — English](https://meddah.systems/cv.pdf) &nbsp;|&nbsp; 📄 [Télécharger PDF — Français](https://meddah.systems/cv-fr.pdf)
 
 ---
 
 ## Mohamed MEDDAH
 
-**Cybersecurity Engineer | Cloud Security | Offensive Security**
+**Cybersecurity Engineering Student (Bac+5) | Cloud Security | Offensive Security | Bug Bounty**
 
-📍 Marrakech, Morocco · 🌍 Open to relocation · Open to remote
+📍 Marrakech, Morocco · 🌍 Open to relocation · Open to remote  
 📧 mohamed@meddah.systems · [linkedin.com/in/meddah](https://linkedin.com/in/meddah) · [github.com/mrmeddah](https://github.com/mrmeddah) · [meddah.systems](https://meddah.systems)
 
 ---
 
-## 🎯 Professional Summary
+## 🎯 Summary
 
-Final-year Cybersecurity Engineering student (Bac+5 / Master's equivalent, Bologna Process EQF Level 7, expected Jun. 2027) with confirmed production bug bounty impact and cloud security tooling across Azure and AWS. Proven across offensive web and API testing, Azure RBAC privilege escalation research, and DORA-aligned defensive tooling. Proficient in English (C1) and French (B2). Seeking PFE internship in EU regulated environments from February 2027.
+Final-year Cybersecurity Engineering student (Bac+5, EMSI Marrakech) with hands-on experience in cloud security, adversary simulation, and web application penetration testing. Active bug bounty researcher with confirmed critical findings on production targets. AWS Certified Cloud Practitioner · SC-500 in progress.
 
 ---
 
 ## 🛠️ Technical Skills
 
-**Offensive Security:** Penetration Testing, Web Application Security, API Security, SSRF, IDOR/BOLA, OAuth 2.0 Exploitation, GraphQL Security, Subdomain Enumeration, AD Attacks, NTLM Relay, ADCS Abuse, LFI
+**Offensive Security:** Penetration Testing, Web App & API Security, SSRF, IDOR/BOLA, OAuth 2.0, GraphQL, AD Attacks, NTLM Relay, ADCS Abuse, Privilege Escalation; Burp Suite Pro, BloodHound, Metasploit, Nmap, Subfinder, Amass, httpx, ffuf, Shodan, truffleHog
 
-**Cloud Security — Azure:** Security Posture Management, Defender for Cloud, Microsoft Entra ID, Conditional Access, Managed Identities, Azure RBAC, Key Vault, Azure Functions, ARM Templates, Azure Monitor
+**Cloud & Infrastructure:** Azure CSPM, Defender for Cloud, Entra ID, Conditional Access, Managed Identities, IAM, RBAC, PAM, Key Vault; AWS (EC2, VPC, IAM, S3, GuardDuty, Security Hub); Terraform IaC, Ansible CIS benchmark hardening, Docker, GNS3, Wireshark
 
-**Cloud Security — AWS:** EC2, VPC, IAM, S3, RDS, Secrets Manager, CloudTrail, Security Hub, GuardDuty, 70+ services via Terraform IaC
+**Detection, GRC & Standards:** SIEM (Microsoft Sentinel, Wazuh), KQL log analysis, Vulnerability Management (Trivy, OpenVAS), STRIDE Threat Modeling, MITRE ATT&CK, OWASP Top 10, CWE, Zero Trust, DORA, NIS2, ISO 27001, NIST CSF
 
-**Frameworks & Standards:** OWASP Top 10, OWASP API Security Top 10, MITRE ATT&CK, CWE, Zero Trust, DORA, NIS2, ISO 27001
-
-**Network:** TCP/IP, BGP, OSPF, VXLAN/EVPN, VLANs, pfSense, Site-to-Site VPN, GNS3, Wireshark (CCNA/CCNP level)
-
-**Security Tools:** Burp Suite Professional, Nmap, Subfinder, Amass, httpx, Feroxbuster, ffuf, Shodan, truffleHog, BloodHound, Metasploit
-
-**Development:** Python, Bash, JavaScript, Java, Go, C++, Django, React, Node.js
-
-**Systems:** Linux (Debian/Ubuntu/Kali), Windows Server, Active Directory, Docker
+**Development & Secure SDLC:** Python, Bash, PowerShell, JavaScript, Java, Go, C++; Django, React, Node.js; SAST/DAST, DevSecOps pipelines; Linux (Debian/Ubuntu/Kali), Windows Server, Active Directory
 
 ---
 
 ## 💼 Professional Experience
 
-### Independent Contractor — Data Curator
-**Veeva Systems** · Remote · Mar. 2024 – Sep. 2024
+### IT Security Intern
+**Municipal ICT Logistics Department** · El Kelaa des Sraghna, Morocco · July 2026 – September 2026
 
-- Processed and validated large-scale structured datasets for pharmaceutical CRM pipelines; maintained data integrity and compliance standards across a multi-client regulated environment, directly applicable to NIS2/DORA data governance requirements.
-
-### IT Infrastructure Intern
-**Menara Prefa** · Marrakech, Morocco · April 2024
-
-- Deployed and configured pfSense firewall (packet filtering, NAT, segmentation); implemented site-to-site VPN using IPsec tunnelling.
+- Designed and deployed a proof-of-concept hybrid cloud security infrastructure to digitise fleet, fuel voucher, and equipment management previously handled on paper.
+- Stack: Azure (App Service, PostgreSQL, Key Vault), Terraform IaC, Ansible CIS benchmark hardening, Keycloak SSO/OIDC, WireGuard, Wazuh SIEM; vulnerability management via Trivy and OpenVAS.
+- Produced ISO 27001:2022 ISMS documentation: STRIDE threat modeling, risk register, Statement of Applicability (93 controls), incident response playbook; aligned to Morocco Law 05-20 & Law 09-08.
 
 ### Development & Systems Administration Intern
-**Municipality of El Kelaa des Sraghna** · El Kelaa, Morocco · August 2023
+**Municipality of El Kelaa des Sraghna** · El Kelaa, Morocco · August 2025 – September 2025
 
-- Built full-stack citizen ticket management application integrated with the national Chikaya platform; RBAC-based routing; Django REST / React / relational DB; Windows Server and Linux administration.
+- Built a full-stack citizen ticket management application integrated with the national Chikaya platform; automatic routing to departments via RBAC; Django REST, React, Linux administration.
+
+### Independent Contractor — Data Curator
+**Veeva Systems** · Remote · March 2024 – September 2024
+
+- Delivered high-accuracy data validation across pharmaceutical CRM pipelines in a fully remote, cross-functional team environment.
+- Maintained compliance standards and data integrity across multi-client deliverables under structured SLA expectations.
+
+### IT Infrastructure Intern
+**Menara Prefa** · Marrakech, Morocco · April 2024 – May 2024
+
+- Deployed pfSense firewall (packet filtering, NAT, segmentation) and site-to-site IPsec VPN for inter-site corporate connectivity.
 
 ---
 
 ## 🏗️ Projects
 
-### Azure RBAC Privilege Escalation Mapper
-*Python | Azure SDK | Microsoft Graph API | Azure Functions · September 2026*
+### Adversary Simulation & Detection Engineering Lab
+*Azure · Terraform · Sentinel · KQL · Containerlab · Sysmon · Mimikatz · Impacket · AADInternals · ROADtools · Python · PowerShell · Aug 2026*
 
-- Enumerates multi-hop Azure privilege escalation paths via RBAC misconfiguration; detects the runCommand/IMDS token theft chain — a Defender for Cloud blind spot.
-- Maps four attack primitives: Run Command abuse, Custom Script Extension backdoor, Role Assignment write escalation, User Data injection; outputs attacker-ready PoC commands with inline DORA Article 9 and CSSF regulatory citations.
+- Executed 5 end-to-end attack chains across 13 MITRE ATT&CK techniques: phishing-to-domain compromise, Entra ID identity attack paths, cloud misconfiguration exfiltration, on-prem-to-cloud lateral movement via PRT abuse, and persistence via backdoor Service Principal.
+- Engineered KQL detection rules in Sentinel per TTP with false positive analysis; produced a coverage map across 5 chains with gap analysis identifying bypass-capable blind spots; authored incident response write-ups per technique.
 
-### Azure Deployment History Sanitizer
-*Python | Azure Functions | ARM API | Shannon Entropy Analysis · July 2026*
+### DevSecOps CI/CD Security Pipeline — Secure SDLC
+*Python · GitHub Actions · Trivy · Semgrep · OWASP ZAP · truffleHog · Docker · 2026*
 
-- Serverless tool purging ARM/Bicep deployment histories that expose plaintext secrets to any Reader-level account; Shannon entropy + keyword heuristics detect credentials, SAS tokens, and connection strings.
-- Three modes: aggressive purge, selective entropy-based, and audit-only; full audit trail to Azure Storage Tables for DORA compliance and CSSF audit readiness.
+- Engineered a Secure SDLC pipeline integrating SAST (Semgrep), DAST (OWASP ZAP), secrets scanning (truffleHog), and container image scanning (Trivy); gates reject builds on critical CVEs or exposed credentials.
+- Automated vulnerability management reporting per build with severity triage and remediation tracking; pipeline deployable as GitHub Actions workflow.
 
 ### Zero-Trust Distributed Storage System
-*Go | Java | libsodium | AES-256-GCM | ABE | JWT · May 2026*
+*Go · Java · libsodium · AES-256-GCM · Attribute-Based Encryption (ABE) · JWT · May 2026*
 
-- Mini-IPFS with client-side AES-256-GCM encryption (libsodium), Merkle DAG integrity, 3-node replication, and cryptographic access control via Attribute-Based Encryption and Proxy Re-Encryption; JWT Ed25519 PoP tokens with nonce-based anti-replay (TTL 30s).
-
-### AWS Cloud Infrastructure (Terraform IaC)
-*Terraform | AWS | IAM | VPC | Secrets Manager · Feb. 2025*
-
-- Provisioned 70+ AWS services via modular Terraform on a live account: least-privilege IAM policies, Secrets Manager integration, multi-service network architecture across EC2, RDS, VPC, S3, and 60+ additional services.
+- Built a content-addressed distributed storage system (mini-IPFS) with client-side AES-256-GCM encryption (libsodium), Merkle DAG integrity verification, and 3-node replication with cryptographic access control via ABE and Proxy Re-Encryption.
+- Zero-Trust authentication: JWT Ed25519 Proof-of-Possession, stateless tokens scoped per operation and CID, nonce-based anti-replay (TTL 30s); validated against 6 security objectives including node collusion resistance.
 
 ### EVPN/VXLAN Spine-Leaf Datacenter Fabric
-*FRRouting | GNS3 | BGP EVPN | Linux iproute2 · 2026*
+*FRRouting · GNS3 · BGP EVPN · OSPF · Linux iproute2 · Wireshark · 2025 – 2026*
 
-- Deployed EVPN/VXLAN overlay on GNS3 with FRRouting (BGP EVPN, OSPF underlay), Route Reflector, and MP-BGP L2VPN; validated MAC/IP distribution via Wireshark; identified VXLAN attack surface: BGP EVPN route poisoning and frame injection via underlay access.
+- Designed and deployed a full EVPN/VXLAN overlay on GNS3 using FRRouting (BGP EVPN, OSPF underlay); identified and documented native VXLAN attack surface including BGP route poisoning and frame injection vectors.
 
 ---
 
@@ -99,12 +95,11 @@ Final-year Cybersecurity Engineering student (Bac+5 / Master's equivalent, Bolog
 
 | Severity | Finding |
 |----------|---------|
-| **Critical (CVSS 9.1)** | Unauthenticated account creation chained with Django DEBUG mode leaking cloud credentials and JWT secrets, then BOLA/IDOR to full attendee PII exfiltration (CWE-200, CWE-284) |
-| **High — OAuth ATO** | redirect_uri validation bypass on GitLab SSO flow — 1-click account takeover on an artifact repository via authorization code grant misconfiguration |
+| **Critical (CVSS 9.1)** | Unauthenticated account creation → Django DEBUG exposing cloud credentials & JWT secrets → BOLA/IDOR full attendee PII exfiltration (CWE-200, CWE-284) |
+| **High — OAuth ATO** | `redirect_uri` validation bypass on GitLab SSO flow — 1-click account takeover on an artifact repository via authorization code grant misconfiguration |
 | **High — SSRF** | Host Header auth bypass on a global advertising platform; reached live Kubernetes microservice returning production data (CWE-918) |
 | **Medium — Info Disclosure** | Exposed Swagger UI, Spring Boot Actuator, internal IP leakage on enterprise IoT/B2B SaaS; extracted API constants from obfuscated JS bundles |
 | **Medium — Credential Exposure** | Unauthenticated AI API keys, search credentials, and internal endpoints live on global e-commerce infrastructure (CWE-548) |
-| **Medium — Admin Exposure** | JBoss/WildFly admin console on telecoms infrastructure; AD FS and WS-Trust endpoint enumeration with timing analysis |
 
 **Methodology:** Subfinder, Amass, httpx, Shodan, Feroxbuster, ffuf, gau, Katana, truffleHog, Burp Suite Professional; OWASP Top 10, OWASP API Security Top 10, CWE classification.
 
@@ -113,7 +108,8 @@ Final-year Cybersecurity Engineering student (Bac+5 / Master's equivalent, Bolog
 ## 🏁 CTF & Labs
 
 - **SecDojo National CTF:** Ranked #100 / 3,500+ participants — top 3% nationally. Techniques: LSASS credential dump, BloodHound attack paths, ADCS ESC11, NTLM relay.
-- **MCP/Prompt Injection Lab (NebulaAssist):** Full attack chain — Nmap recon, SSE token extraction, hidden tool enumeration via prompt injection.
+- **AD Lab (AD105):** BloodHound, ADCS ESC11, NTLM relay, LSASS dumping, privilege escalation paths.
+- **MCP/Prompt Injection Lab (NebulaAssist):** Full attack chain — SSE token extraction, prompt injection, hidden tool enumeration.
 
 ---
 
@@ -131,8 +127,7 @@ Final-year Cybersecurity Engineering student (Bac+5 / Master's equivalent, Bolog
 | Certification | Issuer | Date |
 |---------------|--------|------|
 | AWS Certified Cloud Practitioner (CLF-C02) | Amazon Web Services | Jul. 2026 |
-| Microsoft Certified: Cloud & AI Security Engineer Associate (SC-500) | Microsoft | Sep. 2026 |
-| AWS Certified Solutions Architect — Associate (SAA-C03) | Amazon Web Services | Oct. 2026 |
+| Microsoft Certified: AI & Cloud Security Engineer Associate (SC-500) | Microsoft | In progress — expected Sep. 2026 |
 
 ---
 
@@ -140,6 +135,6 @@ Final-year Cybersecurity Engineering student (Bac+5 / Master's equivalent, Bolog
 
 | Language | Level |
 |----------|-------|
-| Arabic | Native |
+| Arabic (Darija) | Native |
 | French | Professional proficiency (CEFR B2) |
 | English | Professional proficiency (CEFR C1) |
