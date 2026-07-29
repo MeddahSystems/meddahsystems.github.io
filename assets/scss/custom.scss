@@ -1104,3 +1104,92 @@ blockquote::before {
     .hero-cta-group { gap: 10px; }
 }
 
+
+/* ==========================================================================
+   HOMEPAGE FIXES — Font alignment, clickable cards, WIP badge
+   ========================================================================== */
+
+/* Fix font sizes to match site body scale */
+.hero-summary,
+.expertise-desc,
+.project-desc,
+.finding-desc {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+}
+
+.expertise-title,
+.project-title {
+    font-size: 1.05rem !important;
+}
+
+.section-title {
+    font-size: 0.85rem !important;
+}
+
+.metric-label {
+    font-size: 0.82rem !important;
+}
+
+/* Clickable expertise cards */
+a.expertise-card--link,
+a.project-card--link,
+a.cert-badge-item {
+    display: block;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: inherit !important;
+}
+
+a.expertise-card--link::after,
+a.project-card--link::after,
+a.cert-badge-item::after {
+    display: none !important;
+}
+
+a.expertise-card--link .expertise-title,
+a.project-card--link .project-title {
+    transition: color 0.2s ease;
+}
+
+a.expertise-card--link:hover .expertise-title {
+    color: var(--accent-color) !important;
+}
+
+a.project-card--link:hover .project-title {
+    color: var(--accent-color) !important;
+}
+
+/* WIP badge on project cards */
+.project-wip-badge {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fb923c;
+    background: rgba(251, 146, 60, 0.08);
+    border: 1px solid rgba(251, 146, 60, 0.2);
+    border-radius: 6px;
+    padding: 3px 9px;
+}
+
+/* Cert strip items as links */
+a.cert-badge-item {
+    cursor: pointer;
+}
+
+a.cert-badge-item:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--glow-sm);
+    transform: translateY(-2px);
+}
+
+a.cert-badge-item .cert-name {
+    transition: color 0.2s ease;
+}
+
+a.cert-badge-item:hover .cert-name {
+    color: var(--accent-color);
+}

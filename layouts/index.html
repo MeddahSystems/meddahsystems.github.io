@@ -63,7 +63,7 @@
 </section>
 
 <!-- ============================================================
-     EXPERTISE AREAS
+     EXPERTISE AREAS — all cards link to skill pages
      ============================================================ -->
 <section class="portfolio-section">
     <h2 class="section-title">
@@ -71,7 +71,7 @@
         Expertise
     </h2>
     <div class="expertise-grid">
-        <div class="expertise-card">
+        <a href="/page/cloud-security/" class="expertise-card expertise-card--link">
             <div class="expertise-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
             </div>
@@ -80,8 +80,8 @@
             <div class="expertise-tags">
                 <span>Azure</span><span>AWS</span><span>Terraform IaC</span><span>Zero Trust</span>
             </div>
-        </div>
-        <div class="expertise-card">
+        </a>
+        <a href="/page/offensive-security/" class="expertise-card expertise-card--link">
             <div class="expertise-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
             </div>
@@ -90,8 +90,8 @@
             <div class="expertise-tags">
                 <span>Burp Suite Pro</span><span>BloodHound</span><span>MITRE ATT&amp;CK</span><span>OWASP</span>
             </div>
-        </div>
-        <div class="expertise-card">
+        </a>
+        <a href="/page/detection-grc/" class="expertise-card expertise-card--link">
             <div class="expertise-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
@@ -100,8 +100,8 @@
             <div class="expertise-tags">
                 <span>Sentinel</span><span>Wazuh</span><span>KQL</span><span>ISO 27001</span>
             </div>
-        </div>
-        <div class="expertise-card">
+        </a>
+        <a href="/page/network-infra/" class="expertise-card expertise-card--link">
             <div class="expertise-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </div>
@@ -110,12 +110,12 @@
             <div class="expertise-tags">
                 <span>BGP/OSPF</span><span>VXLAN/EVPN</span><span>GNS3</span><span>Wireshark</span>
             </div>
-        </div>
+        </a>
     </div>
 </section>
 
 <!-- ============================================================
-     FEATURED PROJECTS
+     FEATURED PROJECTS — all cards link to their pages
      ============================================================ -->
 <section class="portfolio-section">
     <h2 class="section-title">
@@ -123,7 +123,7 @@
         Featured Projects
     </h2>
     <div class="projects-grid">
-        <div class="project-card project-card--featured">
+        <a href="/post/infrastructure/adversary-simulation-lab/" class="project-card project-card--featured project-card--link">
             <div class="project-header">
                 <div class="project-icon">🔴</div>
                 <div class="project-meta">
@@ -136,8 +136,9 @@
             <div class="project-stack">
                 <span>Azure</span><span>Terraform</span><span>Sentinel</span><span>KQL</span><span>Impacket</span><span>AADInternals</span>
             </div>
-        </div>
-        <div class="project-card">
+            <div class="project-wip-badge">Write-up in progress</div>
+        </a>
+        <a href="/post/infrastructure/devsecops-pipeline/" class="project-card project-card--link">
             <div class="project-header">
                 <div class="project-icon">🔒</div>
                 <div class="project-meta">
@@ -150,8 +151,9 @@
             <div class="project-stack">
                 <span>GitHub Actions</span><span>Trivy</span><span>Semgrep</span><span>OWASP ZAP</span>
             </div>
-        </div>
-        <div class="project-card">
+            <div class="project-wip-badge">Write-up in progress</div>
+        </a>
+        <a href="/post/infrastructure/zero-trust-storage/" class="project-card project-card--link">
             <div class="project-header">
                 <div class="project-icon">🛡️</div>
                 <div class="project-meta">
@@ -164,8 +166,9 @@
             <div class="project-stack">
                 <span>Go</span><span>Java</span><span>libsodium</span><span>ABE</span><span>JWT</span>
             </div>
-        </div>
-        <div class="project-card">
+            <div class="project-wip-badge">Write-up in progress</div>
+        </a>
+        <a href="/post/infrastructure/evpn-vxlan-datacenter-fabric/" class="project-card project-card--link">
             <div class="project-header">
                 <div class="project-icon">🌐</div>
                 <div class="project-meta">
@@ -178,7 +181,7 @@
             <div class="project-stack">
                 <span>FRRouting</span><span>GNS3</span><span>BGP EVPN</span><span>OSPF</span>
             </div>
-        </div>
+        </a>
     </div>
 </section>
 
@@ -189,6 +192,7 @@
     <h2 class="section-title">
         <span class="section-title-line"></span>
         Bug Bounty Research
+        <a href="/post/offensive/" class="section-link">Write-ups →</a>
     </h2>
     <div class="bounty-grid">
         <a href="https://hackerone.com" target="_blank" rel="noopener" class="bounty-platform-badge">
@@ -235,21 +239,21 @@
         <a href="/page/certs/" class="section-link">View All &amp; Verify →</a>
     </h2>
     <div class="cert-strip">
-        <div class="cert-badge-item">
+        <a href="/page/certs/" class="cert-badge-item">
             <div class="cert-issuer">Amazon Web Services</div>
             <div class="cert-name">AWS Certified Cloud Practitioner</div>
             <div class="cert-code">CLF-C02 · Jul. 2026</div>
-        </div>
-        <div class="cert-badge-item cert-badge-item--inprogress">
+        </a>
+        <a href="/page/certs/" class="cert-badge-item cert-badge-item--inprogress">
             <div class="cert-issuer">Microsoft</div>
             <div class="cert-name">AI &amp; Cloud Security Engineer Associate</div>
             <div class="cert-code">SC-500 · In Progress</div>
-        </div>
-        <div class="cert-badge-item cert-badge-item--ctf">
+        </a>
+        <a href="/page/certs/" class="cert-badge-item cert-badge-item--ctf">
             <div class="cert-issuer">SecDojo</div>
             <div class="cert-name">National CTF</div>
             <div class="cert-code">Top 3% · #100 / 3,500+</div>
-        </div>
+        </a>
     </div>
 </section>
 
