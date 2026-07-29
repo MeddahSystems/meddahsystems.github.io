@@ -1,28 +1,280 @@
 {{ define "main" }}
-    <section class="article-content main-article">
-        <div class="article-details">
-            <div class="article-inner">
-                <section class="article-content">
-                    {{ .Content }}
-                </section>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section class="portfolio-hero">
+    <div class="hero-inner">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Open to Opportunities · EU · Remote
+        </div>
+
+        <h1 class="hero-name">Mohamed <span class="hero-name-accent">MEDDAH</span></h1>
+
+        <p class="hero-title">Cloud Security Engineer <span class="hero-sep">&</span> Infrastructure Specialist</p>
+
+        <p class="hero-summary">
+            Final-year Cybersecurity Engineering student <span class="hero-tag">Bac+5 · EQF Level 7</span>
+            with hands-on experience in cloud security architecture, adversary simulation, and web application penetration testing.
+            Active bug bounty researcher with confirmed <strong>critical</strong> findings on production targets.
+        </p>
+
+        <div class="hero-cta-group">
+            <a href="/page/resume/" class="cta-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2"/><path d="M15 7h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/><line x1="12" y1="7" x2="12" y2="17"/></svg>
+                View Resume
+            </a>
+            <a href="/cv.pdf" class="cta-secondary" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download CV
+            </a>
+            <a href="/page/contact/" class="cta-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Contact
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     KEY METRICS STRIP
+     ============================================================ -->
+<section class="metrics-strip">
+    <div class="metric-item">
+        <span class="metric-number">5+</span>
+        <span class="metric-label">Bug Bounty Findings</span>
+    </div>
+    <div class="metric-divider"></div>
+    <div class="metric-item">
+        <span class="metric-number">2</span>
+        <span class="metric-label">AWS &amp; Microsoft Certs</span>
+    </div>
+    <div class="metric-divider"></div>
+    <div class="metric-item">
+        <span class="metric-number">Top 3%</span>
+        <span class="metric-label">National CTF Ranking</span>
+    </div>
+    <div class="metric-divider"></div>
+    <div class="metric-item">
+        <span class="metric-number">70+</span>
+        <span class="metric-label">AWS Services via IaC</span>
+    </div>
+</section>
+
+<!-- ============================================================
+     EXPERTISE AREAS
+     ============================================================ -->
+<section class="portfolio-section">
+    <h2 class="section-title">
+        <span class="section-title-line"></span>
+        Expertise
+    </h2>
+    <div class="expertise-grid">
+        <div class="expertise-card">
+            <div class="expertise-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            </div>
+            <h3 class="expertise-title">Cloud Security</h3>
+            <p class="expertise-desc">Azure CSPM, Defender for Cloud, Entra ID, Conditional Access, AWS GuardDuty, Security Hub, IAM least-privilege architecture.</p>
+            <div class="expertise-tags">
+                <span>Azure</span><span>AWS</span><span>Terraform IaC</span><span>Zero Trust</span>
             </div>
         </div>
-    </section>
+        <div class="expertise-card">
+            <div class="expertise-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3 class="expertise-title">Offensive Security</h3>
+            <p class="expertise-desc">Web &amp; API penetration testing, SSRF, IDOR/BOLA, OAuth exploitation, AD attacks, NTLM relay, ADCS abuse, and active bug bounty research.</p>
+            <div class="expertise-tags">
+                <span>Burp Suite Pro</span><span>BloodHound</span><span>MITRE ATT&amp;CK</span><span>OWASP</span>
+            </div>
+        </div>
+        <div class="expertise-card">
+            <div class="expertise-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="expertise-title">Detection &amp; GRC</h3>
+            <p class="expertise-desc">SIEM engineering with Sentinel &amp; Wazuh, KQL threat hunting, STRIDE threat modeling, ISO 27001 ISMS documentation, DORA &amp; NIS2 alignment.</p>
+            <div class="expertise-tags">
+                <span>Sentinel</span><span>Wazuh</span><span>KQL</span><span>ISO 27001</span>
+            </div>
+        </div>
+        <div class="expertise-card">
+            <div class="expertise-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="expertise-title">Network Infrastructure</h3>
+            <p class="expertise-desc">BGP, OSPF, EVPN/VXLAN fabric design, pfSense, Site-to-Site VPN, GNS3 lab environments. CCNA/CCNP level Wireshark analysis.</p>
+            <div class="expertise-tags">
+                <span>BGP/OSPF</span><span>VXLAN/EVPN</span><span>GNS3</span><span>Wireshark</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FEATURED PROJECTS
+     ============================================================ -->
+<section class="portfolio-section">
+    <h2 class="section-title">
+        <span class="section-title-line"></span>
+        Featured Projects
+    </h2>
+    <div class="projects-grid">
+        <div class="project-card project-card--featured">
+            <div class="project-header">
+                <div class="project-icon">🔴</div>
+                <div class="project-meta">
+                    <span class="project-type">Adversary Simulation</span>
+                    <span class="project-date">Aug 2026</span>
+                </div>
+            </div>
+            <h3 class="project-title">Adversary Simulation &amp; Detection Engineering Lab</h3>
+            <p class="project-desc">5 end-to-end attack chains across 13 MITRE ATT&amp;CK techniques — phishing-to-domain compromise, Entra ID identity attacks, on-prem-to-cloud lateral movement via PRT abuse. Full KQL detection coverage map in Sentinel.</p>
+            <div class="project-stack">
+                <span>Azure</span><span>Terraform</span><span>Sentinel</span><span>KQL</span><span>Impacket</span><span>AADInternals</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-icon">🔒</div>
+                <div class="project-meta">
+                    <span class="project-type">DevSecOps</span>
+                    <span class="project-date">2026</span>
+                </div>
+            </div>
+            <h3 class="project-title">DevSecOps CI/CD Security Pipeline</h3>
+            <p class="project-desc">Secure SDLC pipeline integrating SAST (Semgrep), DAST (OWASP ZAP), secrets scanning (truffleHog), and container image scanning (Trivy). Gates reject builds on critical CVEs.</p>
+            <div class="project-stack">
+                <span>GitHub Actions</span><span>Trivy</span><span>Semgrep</span><span>OWASP ZAP</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-icon">🛡️</div>
+                <div class="project-meta">
+                    <span class="project-type">Cryptography</span>
+                    <span class="project-date">May 2026</span>
+                </div>
+            </div>
+            <h3 class="project-title">Zero-Trust Distributed Storage System</h3>
+            <p class="project-desc">Mini-IPFS with client-side AES-256-GCM encryption, Merkle DAG integrity, 3-node replication, Attribute-Based Encryption access control, and JWT Ed25519 PoP anti-replay.</p>
+            <div class="project-stack">
+                <span>Go</span><span>Java</span><span>libsodium</span><span>ABE</span><span>JWT</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-icon">🌐</div>
+                <div class="project-meta">
+                    <span class="project-type">Network Engineering</span>
+                    <span class="project-date">2025–2026</span>
+                </div>
+            </div>
+            <h3 class="project-title">EVPN/VXLAN Spine-Leaf Datacenter Fabric</h3>
+            <p class="project-desc">Full EVPN/VXLAN overlay on GNS3 using FRRouting (BGP EVPN, OSPF underlay) with native attack surface documentation including BGP route poisoning vectors.</p>
+            <div class="project-stack">
+                <span>FRRouting</span><span>GNS3</span><span>BGP EVPN</span><span>OSPF</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     BUG BOUNTY HIGHLIGHT
+     ============================================================ -->
+<section class="portfolio-section">
+    <h2 class="section-title">
+        <span class="section-title-line"></span>
+        Bug Bounty Research
+    </h2>
+    <div class="bounty-grid">
+        <a href="https://hackerone.com" target="_blank" rel="noopener" class="bounty-platform-badge">
+            <span class="bounty-platform-name">HackerOne</span>
+        </a>
+        <a href="https://intigriti.com" target="_blank" rel="noopener" class="bounty-platform-badge">
+            <span class="bounty-platform-name">Intigriti</span>
+        </a>
+        <a href="https://bugcrowd.com" target="_blank" rel="noopener" class="bounty-platform-badge">
+            <span class="bounty-platform-name">Bugcrowd</span>
+        </a>
+    </div>
+    <div class="findings-list">
+        <div class="finding-item finding-item--critical">
+            <div class="finding-severity">Critical · CVSS 9.1</div>
+            <div class="finding-desc">Unauthenticated account creation → Django DEBUG cloud credential leak → BOLA/IDOR full PII exfiltration (CWE-200, CWE-284)</div>
+        </div>
+        <div class="finding-item finding-item--high">
+            <div class="finding-severity">High · OAuth ATO</div>
+            <div class="finding-desc"><code>redirect_uri</code> bypass on GitLab SSO — 1-click account takeover via authorization code grant misconfiguration</div>
+        </div>
+        <div class="finding-item finding-item--high">
+            <div class="finding-severity">High · SSRF</div>
+            <div class="finding-desc">Host Header auth bypass on a global ad platform; reached live Kubernetes microservice returning production data (CWE-918)</div>
+        </div>
+        <div class="finding-item finding-item--medium">
+            <div class="finding-severity">Medium · Info Disclosure</div>
+            <div class="finding-desc">Exposed Swagger UI, Spring Boot Actuator, internal IP leakage on enterprise IoT/B2B SaaS</div>
+        </div>
+        <div class="finding-item finding-item--medium">
+            <div class="finding-severity">Medium · Credential Exposure</div>
+            <div class="finding-desc">Unauthenticated AI API keys &amp; search credentials on global e-commerce infrastructure (CWE-548)</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CERTIFICATIONS STRIP
+     ============================================================ -->
+<section class="portfolio-section">
+    <h2 class="section-title">
+        <span class="section-title-line"></span>
+        Certifications
+        <a href="/page/certs/" class="section-link">View All &amp; Verify →</a>
+    </h2>
+    <div class="cert-strip">
+        <div class="cert-badge-item">
+            <div class="cert-issuer">Amazon Web Services</div>
+            <div class="cert-name">AWS Certified Cloud Practitioner</div>
+            <div class="cert-code">CLF-C02 · Jul. 2026</div>
+        </div>
+        <div class="cert-badge-item cert-badge-item--inprogress">
+            <div class="cert-issuer">Microsoft</div>
+            <div class="cert-name">AI &amp; Cloud Security Engineer Associate</div>
+            <div class="cert-code">SC-500 · In Progress</div>
+        </div>
+        <div class="cert-badge-item cert-badge-item--ctf">
+            <div class="cert-issuer">SecDojo</div>
+            <div class="cert-name">National CTF</div>
+            <div class="cert-code">Top 3% · #100 / 3,500+</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     LATEST WRITE-UPS
+     ============================================================ -->
+<section class="portfolio-section">
+    <h2 class="section-title">
+        <span class="section-title-line"></span>
+        Latest Write-ups
+        <a href="/post/" class="section-link">All Posts →</a>
+    </h2>
+
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ $filtered := where $pages "Params.hidden" "!=" true }}
-    {{ $pag := .Paginate ($filtered) }}
-
-    <section class="article-list">
-        {{ range $index, $element := $pag.Pages }}
+    <section class="article-list article-list--homepage">
+        {{ range first 3 $filtered }}
             {{ partial "article-list/default" . }}
         {{ end }}
     </section>
+</section>
 
-    {{- partial "pagination.html" . -}}
-    {{- partial "footer/footer" . -}}
+{{- partial "footer/footer" . -}}
 {{ end }}
 
 {{ define "right-sidebar" }}
     {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
 {{ end }}
-
