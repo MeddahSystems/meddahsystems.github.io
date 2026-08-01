@@ -7,7 +7,7 @@ categories: ["infrastructure"]
 description: "A mini-IPFS with AES-256-GCM encryption, Merkle DAG integrity, 3-node replication, and Attribute-Based Encryption access control."
 ---
 
-> 🚧 **Full write-up coming soon.** This page is a placeholder — cryptographic architecture diagrams, code walkthroughs, and security validation results are being documented.
+> 🚧 **Full write-up coming soon.** Cryptographic architecture diagrams, code walkthroughs, and security validation results are being documented.
 
 ## Overview
 

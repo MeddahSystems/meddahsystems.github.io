@@ -7,11 +7,11 @@ categories: ["infrastructure"]
 description: "A Secure SDLC pipeline integrating SAST, DAST, secrets scanning, and container scanning — gates reject builds on critical CVEs."
 ---
 
-> 🚧 **Full write-up coming soon.** This page is a placeholder — detailed architecture, pipeline YAML, and scan result examples are being documented.
+> 🚧 **Full write-up coming soon.** Architecture, pipeline YAML, and scan result examples are being documented.
 
 ## Overview
 
-A production-ready Secure SDLC pipeline that integrates four scanning layers into a GitHub Actions workflow. The pipeline gates reject builds automatically when critical CVEs or exposed credentials are detected.
+A production-ready Secure SDLC pipeline that integrates four scanning layers into a GitHub Actions workflow. Build gates reject automatically when critical CVEs or exposed credentials are detected.
 
 ## Pipeline Stages
 

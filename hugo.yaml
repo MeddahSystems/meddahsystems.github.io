@@ -2,6 +2,23 @@ title: MEDDAH Mohamed
 baseURL: https://meddah.systems
 theme: hugo-theme-stack
 enableRobotsTXT: true
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+    en:
+        languageName: English
+        weight: 1
+        params:
+            sidebar:
+                subtitle: Cybersecurity Engineer | Cloud Security | Offensive Security
+    fr:
+        languageName: Français
+        weight: 2
+        params:
+            sidebar:
+                subtitle: Ingénieur Cybersécurité | Sécurité Cloud | Sécurité Offensive
+
 params:
     favicon: /favicon.ico
     mainSections:
@@ -26,11 +43,11 @@ params:
             src: img/og.webp
 
     footer:
-        copyright: MEDDAH Mohamed // Operational Security
+        copyright: MEDDAH Mohamed // Cloud Security
 
     colorScheme:
-        toggle: false
-        default: dark
+        toggle: true
+        default: light
 
     article:
         headingAnchor: true

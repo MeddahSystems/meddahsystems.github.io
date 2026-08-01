@@ -7,7 +7,7 @@ categories: ["infrastructure"]
 description: "5 end-to-end attack chains across 13 MITRE ATT&CK techniques with full KQL detection coverage in Microsoft Sentinel."
 ---
 
-> 🚧 **Full write-up coming soon.** This page is a placeholder — detailed documentation, attack chain diagrams, and detection rule breakdowns are being written up.
+> 🚧 **Full write-up coming soon.** Detailed documentation, attack chain diagrams, and detection rule breakdowns are being written up.
 
 ## Overview
 
